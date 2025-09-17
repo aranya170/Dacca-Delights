@@ -74,7 +74,7 @@
                     <h2 class="text-4xl lg:text-5xl font-black text-warm-brown font-outfit leading-tight mb-6">
                         Send Us a Message
                     </h2>
-                    <div id="contact-form">
+                    <form id="contact-form" method="POST" action="form_handler.php">
                         <div class="space-y-6">
                             <div>
                                 <label for="name" class="block text-gray-700 font-outfit font-medium mb-2">Name</label>
@@ -103,15 +103,13 @@
                                     class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-banana"
                                     placeholder="Your Message"></textarea>
                             </div>
-                            <button id="submit-btn"
+                            <button type="submit"
                                 class="w-full bg-banana hover:bg-banana-dark text-warm-brown font-outfit font-semibold py-3 px-6 rounded-full btn-hover">
                                 Send Message
                             </button>
                         </div>
-                        <p class="text-gray-600 font-outfit text-sm mt-4">
-                            Note: Form submission requires backend integration.
-                        </p>
-                    </div>
+                    </form>
+                    <div id="form-messages" class="mt-4"></div>
                 </div>
 
                 <!-- Contact Information and Map -->
@@ -153,7 +151,41 @@
 
     <?php include 'footer.php'; ?>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="script.js"></script>
+    <script>
+        $(function () {
+            var form = $('#contact-form');
+            var formMessages = $('#form-messages');
+            $(form).submit(function (event) {
+                event.preventDefault();
+                var formData = $(form).serialize();
+                $.ajax({
+                    type: 'POST',
+                    url: $(form).attr('action'),
+                    data: formData
+                })
+                    .done(function (response) {
+                        $(formMessages).removeClass('error');
+                        $(formMessages).addClass('success');
+                        $(formMessages).text(response);
+                        $('#name').val('');
+                        $('#email').val('');
+                        $('#phone').val('');
+                        $('#message').val('');
+                    })
+                    .fail(function (data) {
+                        $(formMessages).removeClass('success');
+                        $(formMessages).addClass('error');
+                        if (data.responseText !== '') {
+                            $(formMessages).text(data.responseText);
+                        } else {
+                            $(formMessages).text('Oops! An error occurred and your message could not be sent.');
+                        }
+                    });
+            });
+        });
+    </script>
 </body>
 
 </html>

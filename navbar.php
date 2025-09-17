@@ -3,9 +3,9 @@
         <div class="flex justify-between items-center">
             <!-- Logo -->
             <div class="flex items-center space-x-3">
-                <a href="index.php" class="w-16 h-16 md:w-24 md:h-24 rounded-full flex items-center justify-center">
+                <a href="index.php" class="w-16 h-16 sm:w-12 sm:h-12 md:w-24 md:h-24 rounded-full flex items-center justify-center">
                     <img src="assets/logo/Logo_Dacca Delights-03.svg" alt="Dacca Delights Logo"
-                        class="w-32 h-32 md:w-48 md:h-48 object-contain">
+                        class="w-32 h-32 sm:w-24 sm:h-24 md:w-48 md:h-48 object-contain">
                 </a>
             </div>
 
@@ -28,22 +28,24 @@
             <div id="nav-links"
                 class="flex md:items-center md:space-x-8 flex-col md:flex-row absolute md:static top-20 left-0 w-full md:w-auto bg-cream md:bg-transparent p-4 md:p-0 transition-all duration-300 ease-in-out md:flex hidden">
                 <a href="index.php"
-                    class="text-gray-700 hover:text-warm-brown font-outfit font-medium py-2 md:py-0 opacity-0 md:opacity-100 nav-item">Home</a>
+                    class="text-gray-700 hover:text-warm-brown font-outfit font-medium py-2 md:py-0 opacity-0 md:opacity-100 nav-item sm:text-sm">Home</a>
                 <a href="menu.php"
-                    class="text-gray-700 hover:text-warm-brown font-outfit font-medium py-2 md:py-0 opacity-0 md:opacity-100 nav-item">Menu</a>
+                    class="text-gray-700 hover:text-warm-brown font-outfit font-medium py-2 md:py-0 opacity-0 md:opacity-100 nav-item sm:text-sm">Menu</a>
                 <a href="about.php"
-                    class="text-gray-700 hover:text-warm-brown font-outfit font-medium py-2 md:py-0 opacity-0 md:opacity-100 nav-item">About
+                    class="text-gray-700 hover:text-warm-brown font-outfit font-medium py-2 md:py-0 opacity-0 md:opacity-100 nav-item sm:text-sm">About
                     Us</a>
                 <a href="contact.php"
-                    class="text-gray-700 hover:text-warm-brown font-outfit font-medium py-2 md:py-0 opacity-0 md:opacity-100 nav-item">Contact</a>
+                    class="text-gray-700 hover:text-warm-brown font-outfit font-medium py-2 md:py-0 opacity-0 md:opacity-100 nav-item sm:text-sm">Contact</a>
             </div>
 
             <!-- Right Side (Order Now Button - Desktop Only) -->
             <div class="hidden md:flex items-center space-x-4">
-                <button
-                    class="bg-banana hover:bg-banana-dark text-warm-brown font-outfit font-semibold py-3 px-6 rounded-full btn-hover transition-colors duration-300">
-                    Order Now!
-                </button>
+                <a href="https://wa.me/8801622823269?text=I%20would%20like%20to%20place%20an%20order" target="_blank">
+                    <button
+                        class="bg-banana hover:bg-banana-dark text-warm-brown font-outfit font-semibold py-3 sm:py-2 px-6 sm:px-4 rounded-full btn-hover transition-colors duration-300 sm:text-sm">
+                        Order Now!
+                    </button>
+                </a>
             </div>
         </div>
     </div>
@@ -120,7 +122,7 @@
         if (!navLinks.classList.contains('hidden')) {
             const navItems = navLinks.querySelectorAll('.nav-item');
             navItems.forEach(item => {
-                item.style.opacity = '0';
+                item.style.opacity = '1';
             });
         }
     });
@@ -134,7 +136,7 @@
             navItems.forEach(item => {
                 item.style.opacity = '1';
             });
-        } else {
+        } else if (!navLinks.classList.contains('hidden')) {
             navLinks.classList.add('hidden');
         }
     });

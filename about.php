@@ -86,14 +86,14 @@
                         </p>
                     </div>
                     <div class="flex justify-center">
-                        <img src="assets\Items\Bread.jpeg" alt="Dacca Delights Interior"
+                        <img src="assets/Items/Bread.jpeg" alt="Dacca Delights Interior"
                             class="rounded-2xl shadow-lg object-cover"
                             style="aspect-ratio: 4/3; width: 100%; max-width: 400px; height: auto;">
                     </div>
                 </div>
             </div>
 
-            <div class="bg-white rounded-3xl p-8 lg:p-12 card-shadow">
+            <!-- <div class="bg-white rounded-3xl p-8 lg:p-12 card-shadow">
                 <h2 class="text-4xl lg:text-5xl font-black text-warm-brown font-outfit leading-tight mb-6 text-center">
                     Find Us
                 </h2>
@@ -103,7 +103,7 @@
                         width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
-            </div>
+            </div> -->
         </div>
     </section>
 

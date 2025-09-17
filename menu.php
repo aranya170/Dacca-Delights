@@ -393,7 +393,7 @@
                 <div class="bg-white rounded-3xl p-8 lg:p-12 card-shadow">
                     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-12">
                         <div class="order-2 lg:order-1">
-                            <img src="assets\Items\roll.jpeg" alt="Buns and Rolls"
+                            <img src="assets/Items/roll.jpeg" alt="Buns and Rolls"
                                 class="w-64 h-64 object-cover rounded-full shadow-xl mx-auto">
                         </div>
                         <div class="order-1 lg:order-2">
@@ -770,7 +770,7 @@
                             </p>
                         </div>
                         <div class="flex justify-center">
-                            <img src="assets\Items\muffin.jpeg" alt="Brownie"
+                            <img src="assets/Items/muffin.jpeg" alt="Brownie"
                                 class="w-64 h-64 object-cover rounded-full shadow-xl">
                         </div>
                     </div>
