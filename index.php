@@ -508,7 +508,7 @@
                                 <div class="text-teal-800">
                                     <!-- Main Heading -->
                                     <h2
-                                        class="text-4xl sm:text-3xl lg:text-5xl font-black font-outfit leading-tight mb-8">
+                                        class="text-4xl sm:text-2xl lg:text-5xl font-black font-outfit leading-tight mb-8">
                                         #LoafWhatTheySay
                                     </h2>
 
