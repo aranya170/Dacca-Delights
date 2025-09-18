@@ -74,15 +74,14 @@
                             Our Story
                         </h2>
                         <p class="text-gray-700 font-outfit text-lg mb-4 leading-relaxed">
-                            Dacca Delights started from a small kitchen with a big dream: to bring the authentic taste
-                            of homemade baked goods to our community. We believe in using only the freshest,
-                            locally-sourced ingredients to create treats that are not only delicious but also made with
-                            love.
+                            Born in a small kitchen, Dacca Delights was built on a dream to share authentic, homemade
+                            flavor with our community. We honor that tradition by using only the freshest,
+                            locally-sourced ingredients.
                         </p>
                         <p class="text-gray-700 font-outfit text-lg leading-relaxed">
-                            From our signature cookies to our artisanal breads, every item on our menu is crafted with
-                            care and attention to detail. We are passionate about baking and dedicated to providing our
-                            customers with an exceptional experience, one delightful bite at a time.
+                            Each offering, from hearty artisanal breads to delicate signature tarts, is crafted with
+                            careful attention to detail. Our passion for baking is our promise to you: an exceptional
+                            experience, one delightful bite at a time.
                         </p>
                     </div>
                     <div class="flex justify-center">

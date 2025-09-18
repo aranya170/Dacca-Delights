@@ -367,91 +367,105 @@
                             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
                                 <!-- Left Image -->
                                 <div class="relative w-full max-w-4xl mx-auto">
-    <div class="rounded-2xl overflow-hidden shadow-xl relative">
-        <!-- Carousel container -->
-        <div id="carousel" class="w-full h-80 lg:h-96 overflow-hidden">
-            <!-- Images -->
-            <img src="assets/Items/MadeWithLoaf.jpg" alt="Baking Process - Hands preparing dough" class="w-full h-full object-cover absolute top-0 left-0 transition-opacity duration-500">
-            <img src="assets/madeWithLoaf/07abdec1-8f2a-4ad9-9758-2c4f280f415a.jpg" alt="Baking Process - Bread in oven" class="w-full h-full object-cover absolute top-0 left-0 transition-opacity duration-500 opacity-0">
-            <img src="assets/madeWithLoaf/455b6cc8-1c96-48ed-a0b3-398a22dba791.jpg" alt="Baking Process - Fresh baked loaf" class="w-full h-full object-cover absolute top-0 left-0 transition-opacity duration-500 opacity-0">
-            <img src="assets/madeWithLoaf/f8d851a3-416f-4b23-9145-dd2a01131713.jpg" alt="Baking Process - Fresh baked loaf" class="w-full h-full object-cover absolute top-0 left-0 transition-opacity duration-500 opacity-0">
-        </div>
-        
-        <!-- Navigation buttons -->
-        <button id="prevBtn" class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-gray-800/50 backdrop-blur-md text-white p-3 rounded-full hover:bg-gray-800/70 transition-all duration-300" aria-label="Previous image">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-            </svg>
-        </button>
-        <button id="nextBtn" class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-gray-800/50 backdrop-blur-md text-white p-3 rounded-full hover:bg-gray-800/70 transition-all duration-300" aria-label="Next image">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-            </svg>
-        </button>
-    </div>
-</div>
+                                    <div class="rounded-2xl overflow-hidden shadow-xl relative">
+                                        <!-- Carousel container -->
+                                        <div id="carousel" class="w-full h-80 lg:h-96 overflow-hidden">
+                                            <!-- Images -->
+                                            <img src="assets/Items/MadeWithLoaf.jpg"
+                                                alt="Baking Process - Hands preparing dough"
+                                                class="w-full h-full object-cover absolute top-0 left-0 transition-opacity duration-500">
+                                            <img src="assets/madeWithLoaf/07abdec1-8f2a-4ad9-9758-2c4f280f415a.jpg"
+                                                alt="Baking Process - Bread in oven"
+                                                class="w-full h-full object-cover absolute top-0 left-0 transition-opacity duration-500 opacity-0">
+                                            <img src="assets/madeWithLoaf/455b6cc8-1c96-48ed-a0b3-398a22dba791.jpg"
+                                                alt="Baking Process - Fresh baked loaf"
+                                                class="w-full h-full object-cover absolute top-0 left-0 transition-opacity duration-500 opacity-0">
+                                            <img src="assets/madeWithLoaf/f8d851a3-416f-4b23-9145-dd2a01131713.jpg"
+                                                alt="Baking Process - Fresh baked loaf"
+                                                class="w-full h-full object-cover absolute top-0 left-0 transition-opacity duration-500 opacity-0">
+                                        </div>
 
-<script>
-    const carousel = document.getElementById('carousel');
-    const images = carousel.getElementsByTagName('img');
-    const prevBtn = document.getElementById('prevBtn');
-    const nextBtn = document.getElementById('nextBtn');
-    let index1 = 0;
-    let playInterval;
+                                        <!-- Navigation buttons -->
+                                        <button id="prevBtn"
+                                            class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-gray-800/50 backdrop-blur-md text-white p-3 rounded-full hover:bg-gray-800/70 transition-all duration-300"
+                                            aria-label="Previous image">
+                                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M15 19l-7-7 7-7" />
+                                            </svg>
+                                        </button>
+                                        <button id="nextBtn"
+                                            class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-gray-800/50 backdrop-blur-md text-white p-3 rounded-full hover:bg-gray-800/70 transition-all duration-300"
+                                            aria-label="Next image">
+                                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M9 5l7 7-7 7" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
 
-    function showImage(index) {
-        for (let i = 0; i < images.length; i++) {
-            images[i].classList.add('opacity-0');
-            images[i].classList.remove('opacity-100');
-        }
-        images[index].classList.remove('opacity-0');
-        images[index].classList.add('opacity-100');
-        index1 = index;
-    }
+                                <script>
+                                const carousel = document.getElementById('carousel');
+                                const images = carousel.getElementsByTagName('img');
+                                const prevBtn = document.getElementById('prevBtn');
+                                const nextBtn = document.getElementById('nextBtn');
+                                let index1 = 0;
+                                let playInterval;
 
-    function nextImage() {
-        const nextIndex = (index1 + 1) % images.length;
-        showImage(nextIndex);
-    }
+                                function showImage(index) {
+                                    for (let i = 0; i < images.length; i++) {
+                                        images[i].classList.add('opacity-0');
+                                        images[i].classList.remove('opacity-100');
+                                    }
+                                    images[index].classList.remove('opacity-0');
+                                    images[index].classList.add('opacity-100');
+                                    index1 = index;
+                                }
 
-    function prevImage() {
-        const prevIndex = (index1 - 1 + images.length) % images.length;
-        showImage(prevIndex);
-    }
+                                function nextImage() {
+                                    const nextIndex = (index1 + 1) % images.length;
+                                    showImage(nextIndex);
+                                }
 
-    // Auto-play functionality
-    function startAutoPlay() {
-        stopAutoPlay(); // Clear any existing interval to prevent duplicates
-        playInterval = setInterval(nextImage, 4000); // Change image every 4 seconds
-    }
+                                function prevImage() {
+                                    const prevIndex = (index1 - 1 + images.length) % images.length;
+                                    showImage(prevIndex);
+                                }
 
-    function stopAutoPlay() {
-        clearInterval(playInterval);
-    }
+                                // Auto-play functionality
+                                function startAutoPlay() {
+                                    stopAutoPlay(); // Clear any existing interval to prevent duplicates
+                                    playInterval = setInterval(nextImage, 4000); // Change image every 4 seconds
+                                }
 
-    // Event listeners for buttons
-    nextBtn.addEventListener('click', () => {
-        stopAutoPlay();
-        nextImage();
-        startAutoPlay();
-    });
+                                function stopAutoPlay() {
+                                    clearInterval(playInterval);
+                                }
 
-    prevBtn.addEventListener('click', () => {
-        stopAutoPlay();
-        prevImage();
-        startAutoPlay();
-    });
+                                // Event listeners for buttons
+                                nextBtn.addEventListener('click', () => {
+                                    stopAutoPlay();
+                                    nextImage();
+                                    startAutoPlay();
+                                });
 
-    // Pause auto-play on hover
-    carousel.addEventListener('mouseenter', stopAutoPlay);
-    carousel.addEventListener('mouseleave', startAutoPlay);
+                                prevBtn.addEventListener('click', () => {
+                                    stopAutoPlay();
+                                    prevImage();
+                                    startAutoPlay();
+                                });
 
-    // Start auto-play immediately
-    startAutoPlay();
+                                // Pause auto-play on hover
+                                carousel.addEventListener('mouseenter', stopAutoPlay);
+                                carousel.addEventListener('mouseleave', startAutoPlay);
 
-    // Initial display
-    showImage(index1);
-</script>
+                                // Start auto-play immediately
+                                startAutoPlay();
+
+                                // Initial display
+                                showImage(index1);
+                                </script>
 
                                 <!-- Right Content -->
                                 <div class="text-white">
@@ -492,171 +506,258 @@
                             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                                 <!-- Left Content -->
                                 <div class="text-teal-800">
-    <!-- Main Heading -->
-    <h2 class="text-4xl sm:text-3xl lg:text-5xl font-black font-outfit leading-tight mb-8">
-        Obsessed with Dacca Delights!
-    </h2>
+                                    <!-- Main Heading -->
+                                    <h2
+                                        class="text-4xl sm:text-3xl lg:text-5xl font-black font-outfit leading-tight mb-8">
+                                        #LoafWhatTheySay
+                                    </h2>
 
-    <!-- Customer Review Carousel -->
-    <div class="relative w-full max-w-2xl mx-auto">
-        <div id="reviewCarousel" class="overflow-hidden">
-            <!-- Review Slides -->
-            <div class="flex transition-transform duration-500 ease-in-out" id="reviewSlides">
-                <!-- Review 1 -->
-                <div class="flex items-start gap-4 mb-6 min-w-full">
-                    <div class="flex-shrink-0">
-                        <div class="w-16 h-16 rounded-full overflow-hidden">
-                            <img src="https://img.freepik.com/premium-vector/portrait-brunette-woman-avatar-female-person-vector-icon-adult-flat-style_605517-159.jpg?semt=ais_incoming&w=740&q=80"
-                                alt="Customer" class="w-full h-full object-cover">
-                        </div>
-                    </div>
-                    <div>
-                        <p class="text-gray-700 font-outfit text-lg sm:text-base leading-relaxed mb-2">
-                            Sarah Chowdhury
-                        </p>
-                        <p class="text-gray-600 font-outfit text-sm sm:text-xs">
-                            The bagels are chewy on the outside, soft inside, and perfect for stacking with cold cuts. Their baguette is just as good! crispy crust, fluffy middle. I've already ordered three times, and coming back for more!
-                        </p>
-                    </div>
-                </div>
-                <!-- Review 2 -->
-                <div class="flex items-start gap-4 mb-6 min-w-full">
-                    <div class="flex-shrink-0">
-                        <div class="w-16 h-16 rounded-full overflow-hidden">
-                            <img src="https://img.freepik.com/premium-vector/portrait-young-man-avatar-male-person-vector-icon-adult-flat-style_605517-161.jpg?semt=ais_incoming&w=740&q=80"
-                                alt="Customer" class="w-full h-full object-cover">
-                        </div>
-                    </div>
-                    <div>
-                        <p class="text-gray-700 font-outfit text-lg sm:text-base leading-relaxed mb-2">
-                            Ahmed Khan
-                        </p>
-                        <p class="text-gray-600 font-outfit text-sm sm:text-xs">
-                            Absolutely love the sourdough! It has the perfect tang and crust. Paired it with their cream cheese spread, and it's a game-changer. Highly recommend!
-                        </p>
-                    </div>
-                </div>
-                <!-- Review 3 -->
-                <div class="flex items-start gap-4 mb-6 min-w-full">
-                    <div class="flex-shrink-0">
-                        <div class="w-16 h-16 rounded-full overflow-hidden">
-                            <img src="https://img.freepik.com/premium-vector/portrait-woman-avatar-female-person-vector-icon-adult-flat-style_605517-160.jpg?semt=ais_incoming&w=740&q=80"
-                                alt="Customer" class="w-full h-full object-cover">
-                        </div>
-                    </div>
-                    <div>
-                        <p class="text-gray-700 font-outfit text-lg sm:text-base leading-relaxed mb-2">
-                            Priya Rahman
-                        </p>
-                        <p class="text-gray-600 font-outfit text-sm sm:text-xs">
-                            The croissants are buttery and flaky, just like in Paris! I'm obsessed with their pastries. Ordering is so easy, and delivery is always on time.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
+                                    <!-- Customer Review Carousel -->
+                                    <div class="relative w-full max-w-2xl mx-auto">
+                                        <div id="reviewCarousel" class="overflow-hidden">
+                                            <!-- Review Slides -->
+                                            <div class="flex transition-transform duration-500 ease-in-out"
+                                                id="reviewSlides">
+                                                <!-- Review 1 -->
+                                                <div class="flex items-start gap-4 mb-6 min-w-full">
+                                                    <div class="flex-shrink-0">
+                                                        <div class="w-16 h-16 rounded-full overflow-hidden">
+                                                            <img src="https://img.freepik.com/premium-vector/portrait-brunette-woman-avatar-female-person-vector-icon-adult-flat-style_605517-159.jpg?semt=ais_incoming&w=740&q=80"
+                                                                alt="Customer" class="w-full h-full object-cover">
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <p
+                                                            class="text-gray-700 font-outfit text-lg sm:text-base leading-relaxed mb-2">
+                                                            Sarah Chowdhury
+                                                        </p>
+                                                        <p class="text-gray-600 font-outfit text-sm sm:text-xs">
+                                                            The bagels are chewy on the outside, soft inside, and
+                                                            perfect for stacking with cold cuts. Their baguette is just
+                                                            as good! crispy crust, fluffy middle. I've already ordered
+                                                            three times, and coming back for more!
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <!-- Review 2 -->
+                                                <div class="flex items-start gap-4 mb-6 min-w-full">
+                                                    <div class="flex-shrink-0">
+                                                        <div class="w-16 h-16 rounded-full overflow-hidden">
+                                                            <img src="https://cdn1.iconfinder.com/data/icons/user-pictures/100/male3-512.png"
+                                                                alt="Customer" class="w-full h-full object-cover">
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <p
+                                                            class="text-gray-700 font-outfit text-lg sm:text-base leading-relaxed mb-2">
+                                                            Adnan Chowdhury
+                                                        </p>
+                                                        <p class="text-gray-600 font-outfit text-sm sm:text-xs">
+                                                            We recently ordered 2 baguettes. I have to say the product
+                                                            was excellent. We really miss rustic, western bread which is
+                                                            not readily available in Bangladesh. Finally, Dacca Delights
+                                                            have taken care of that.
+                                                            Price is also reasonable.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <!-- Review 3 -->
+                                                <div class="flex items-start gap-4 mb-6 min-w-full">
+                                                    <div class="flex-shrink-0">
+                                                        <div class="w-16 h-16 rounded-full overflow-hidden">
+                                                            <img src="https://cdn1.iconfinder.com/data/icons/user-pictures/100/male3-512.png"
+                                                                alt="Customer" class="w-full h-full object-cover">
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <p
+                                                            class="text-gray-700 font-outfit text-lg sm:text-base leading-relaxed mb-2">
+                                                            Arif Ali
+                                                        </p>
+                                                        <p class="text-gray-600 font-outfit text-sm sm:text-xs">
+                                                            I usually dont post reviews but I make exceptions when the
+                                                            experience is extraordinary. Every experience I`ve had with
+                                                            Dacca Delights has been just that. Best customer service in
+                                                            Dhaka and the baguette, milk bread, bagels, brioche rolls
+                                                            are all exquisite. I order weekly and I encourage everyone
+                                                            to try it, it`ll soon become your go to place in Dhaka. So
+                                                            glad I can order top tier quality bread without leaving my
+                                                            house and I can even personalize my order to my preference.
+                                                            I cannot say enough about this place, I`d give 6 stars if I
+                                                            could.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="flex items-start gap-4 mb-6 min-w-full">
+                                                    <div class="flex-shrink-0">
+                                                        <div class="w-16 h-16 rounded-full overflow-hidden">
+                                                            <img src="https://img.freepik.com/premium-vector/portrait-brunette-woman-avatar-female-person-vector-icon-adult-flat-style_605517-159.jpg?semt=ais_incoming&w=740&q=80"
+                                                                alt="Customer" class="w-full h-full object-cover">
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <p
+                                                            class="text-gray-700 font-outfit text-lg sm:text-base leading-relaxed mb-2">
+                                                            Rezia Malik
+                                                        </p>
+                                                        <p class="text-gray-600 font-outfit text-sm sm:text-xs">
+                                                            Best suger-free brown bread in the town!
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="flex items-start gap-4 mb-6 min-w-full">
+                                                    <div class="flex-shrink-0">
+                                                        <div class="w-16 h-16 rounded-full overflow-hidden">
+                                                            <img src="https://img.freepik.com/premium-vector/portrait-brunette-woman-avatar-female-person-vector-icon-adult-flat-style_605517-159.jpg?semt=ais_incoming&w=740&q=80"
+                                                                alt="Customer" class="w-full h-full object-cover">
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <p
+                                                            class="text-gray-700 font-outfit text-lg sm:text-base leading-relaxed mb-2">
+                                                            Sumaiya
+                                                        </p>
+                                                        <p class="text-gray-600 font-outfit text-sm sm:text-xs">
+                                                            I`m picky with my desserts… extremely picky… but I love
+                                                            tarts and usually the downfall of a custard tart is that
+                                                            it`s too sweet.
 
-        <!-- Dots Navigation -->
-        <div id="dotsNav" class="flex justify-center gap-2 mt-6">
-            <button class="dot w-3 h-3 rounded-full bg-gray-300 transition-all duration-300" data-slide="0" aria-label="Go to slide 1"></button>
-            <button class="dot w-3 h-3 rounded-full bg-gray-300 transition-all duration-300" data-slide="1" aria-label="Go to slide 2"></button>
-            <button class="dot w-3 h-3 rounded-full bg-gray-300 transition-all duration-300" data-slide="2" aria-label="Go to slide 3"></button>
-        </div>
+                                                            But somehow u managed to hit just the perfect level of
+                                                            sweetness… idk what magic R&D ur head baker did because oh
+                                                            my goodness… it`s not overwhelming and still light enough to
+                                                            enjoy the full bite… the crust is yum, but the custard
+                                                            definitely stands out… really satisfies the sweetness
+                                                            craving…
 
-        <!-- Navigation buttons (under the carousel) -->
-        <div class="flex justify-between mt-6">
-            <button id="prevReviewBtn" class="text-gray-600 hover:text-teal-800 transition-colors duration-300" aria-label="Previous review">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-                </svg>
-            </button>
-            <button id="nextReviewBtn" class="text-gray-600 hover:text-teal-800 transition-colors duration-300" aria-label="Next review">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                </svg>
-            </button>
-        </div>
-    </div>
-</div>
+                                                            if u guys can use this recipe to make a lemon or fruit tart
+                                                            in the future 🫡🫡 you know I`m here
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
 
-<script>
-    const reviewCarousel = document.getElementById('reviewCarousel');
-    const reviewSlides = document.getElementById('reviewSlides');
-    const slides = reviewSlides.getElementsByClassName('min-w-full');
-    const prevReviewBtn = document.getElementById('prevReviewBtn');
-    const nextReviewBtn = document.getElementById('nextReviewBtn');
-    const dots = document.querySelectorAll('.dot');
-    let currentIndex = 0;
-    let autoPlayInterval;
+                                        <!-- Dots Navigation -->
+                                        <div id="dotsNav" class="flex justify-center gap-2 mt-6">
+                                            <button
+                                                class="dot w-3 h-3 rounded-full bg-gray-300 transition-all duration-300"
+                                                data-slide="0" aria-label="Go to slide 1"></button>
+                                            <button
+                                                class="dot w-3 h-3 rounded-full bg-gray-300 transition-all duration-300"
+                                                data-slide="1" aria-label="Go to slide 2"></button>
+                                            <button
+                                                class="dot w-3 h-3 rounded-full bg-gray-300 transition-all duration-300"
+                                                data-slide="2" aria-label="Go to slide 3"></button>
+                                            <button
+                                                class="dot w-3 h-3 rounded-full bg-gray-300 transition-all duration-300"
+                                                data-slide="1" aria-label="Go to slide 2"></button>
+                                            <button
+                                                class="dot w-3 h-3 rounded-full bg-gray-300 transition-all duration-300"
+                                                data-slide="2" aria-label="Go to slide 3"></button>
+                                        </div>
 
-    function showSlide(index) {
-        reviewSlides.style.transform = `translateX(-${index * 100}%)`;
-        currentIndex = index;
-        
-        // Update dots
-        dots.forEach((dot, i) => {
-            if (i === index) {
-                dot.classList.add('w-6', 'bg-teal-600');
-                dot.classList.remove('w-3', 'bg-gray-300');
-            } else {
-                dot.classList.add('w-3', 'bg-gray-300');
-                dot.classList.remove('w-6', 'bg-teal-600');
-            }
-        });
-    }
+                                        <!-- Navigation buttons (under the carousel) -->
+                                        <div class="flex justify-between mt-6">
+                                            <button id="prevReviewBtn"
+                                                class="text-gray-600 hover:text-teal-800 transition-colors duration-300"
+                                                aria-label="Previous review">
+                                                <svg class="w-6 h-6" fill="none" stroke="currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2" d="M15 19l-7-7 7-7" />
+                                                </svg>
+                                            </button>
+                                            <button id="nextReviewBtn"
+                                                class="text-gray-600 hover:text-teal-800 transition-colors duration-300"
+                                                aria-label="Next review">
+                                                <svg class="w-6 h-6" fill="none" stroke="currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2" d="M9 5l7 7-7 7" />
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
 
-    function nextSlide() {
-        const nextIndex = (currentIndex + 1) % slides.length;
-        showSlide(nextIndex);
-    }
+                                <script>
+                                const reviewCarousel = document.getElementById('reviewCarousel');
+                                const reviewSlides = document.getElementById('reviewSlides');
+                                const slides = reviewSlides.getElementsByClassName('min-w-full');
+                                const prevReviewBtn = document.getElementById('prevReviewBtn');
+                                const nextReviewBtn = document.getElementById('nextReviewBtn');
+                                const dots = document.querySelectorAll('.dot');
+                                let currentIndex = 0;
+                                let autoPlayInterval;
 
-    function prevSlide() {
-        const prevIndex = (currentIndex - 1 + slides.length) % slides.length;
-        showSlide(prevIndex);
-    }
+                                function showSlide(index) {
+                                    reviewSlides.style.transform = `translateX(-${index * 100}%)`;
+                                    currentIndex = index;
 
-    // Auto-play functionality
-    function startAutoPlay() {
-        stopAutoPlay(); // Clear any existing interval
-        autoPlayInterval = setInterval(nextSlide, 6000); // Change review every 6 seconds
-    }
+                                    // Update dots
+                                    dots.forEach((dot, i) => {
+                                        if (i === index) {
+                                            dot.classList.add('w-6', 'bg-teal-600');
+                                            dot.classList.remove('w-3', 'bg-gray-300');
+                                        } else {
+                                            dot.classList.add('w-3', 'bg-gray-300');
+                                            dot.classList.remove('w-6', 'bg-teal-600');
+                                        }
+                                    });
+                                }
 
-    function stopAutoPlay() {
-        clearInterval(autoPlayInterval);
-    }
+                                function nextSlide() {
+                                    const nextIndex = (currentIndex + 1) % slides.length;
+                                    showSlide(nextIndex);
+                                }
 
-    // Event listeners for arrow buttons
-    nextReviewBtn.addEventListener('click', () => {
-        stopAutoPlay();
-        nextSlide();
-        startAutoPlay();
-    });
+                                function prevSlide() {
+                                    const prevIndex = (currentIndex - 1 + slides.length) % slides.length;
+                                    showSlide(prevIndex);
+                                }
 
-    prevReviewBtn.addEventListener('click', () => {
-        stopAutoPlay();
-        prevSlide();
-        startAutoPlay();
-    });
+                                // Auto-play functionality
+                                function startAutoPlay() {
+                                    stopAutoPlay(); // Clear any existing interval
+                                    autoPlayInterval = setInterval(nextSlide, 6000); // Change review every 6 seconds
+                                }
 
-    // Event listeners for dots
-    dots.forEach((dot, index) => {
-        dot.addEventListener('click', () => {
-            stopAutoPlay();
-            showSlide(index);
-            startAutoPlay();
-        });
-    });
+                                function stopAutoPlay() {
+                                    clearInterval(autoPlayInterval);
+                                }
 
-    // Pause auto-play on hover
-    reviewCarousel.addEventListener('mouseenter', stopAutoPlay);
-    reviewCarousel.addEventListener('mouseleave', startAutoPlay);
+                                // Event listeners for arrow buttons
+                                nextReviewBtn.addEventListener('click', () => {
+                                    stopAutoPlay();
+                                    nextSlide();
+                                    startAutoPlay();
+                                });
 
-    // Start auto-play immediately
-    startAutoPlay();
+                                prevReviewBtn.addEventListener('click', () => {
+                                    stopAutoPlay();
+                                    prevSlide();
+                                    startAutoPlay();
+                                });
 
-    // Initial display
-    showSlide(currentIndex);
-</script>
+                                // Event listeners for dots
+                                dots.forEach((dot, index) => {
+                                    dot.addEventListener('click', () => {
+                                        stopAutoPlay();
+                                        showSlide(index);
+                                        startAutoPlay();
+                                    });
+                                });
+
+                                // Pause auto-play on hover
+                                reviewCarousel.addEventListener('mouseenter', stopAutoPlay);
+                                reviewCarousel.addEventListener('mouseleave', startAutoPlay);
+
+                                // Start auto-play immediately
+                                startAutoPlay();
+
+                                // Initial display
+                                showSlide(currentIndex);
+                                </script>
 
                                 <!-- Right Content -->
                                 <div class="text-center lg:text-left">
@@ -703,11 +804,23 @@
                                         <!-- Row 1 -->
                                         <button
                                             class="w-full bg-teal-600 bg-opacity-30 text-teal-800 px-4 sm:px-2 py-2 sm:py-1 rounded-full font-outfit font-medium text-sm sm:text-xs hover:bg-opacity-40 transition-all">
-                                            Sourdough Bread
+                                            Bagel
                                         </button>
                                         <button
                                             class="w-full bg-teal-600 bg-opacity-30 text-teal-800 px-4 sm:px-2 py-2 sm:py-1 rounded-full font-outfit font-medium text-sm sm:text-xs hover:bg-opacity-40 transition-all">
-                                            Mango Cheese Tarts
+                                            Baguette
+                                        </button>
+                                        <button
+                                            class="w-full bg-teal-600 bg-opacity-30 text-teal-800 px-4 sm:px-2 py-2 sm:py-1 rounded-full font-outfit font-medium text-sm sm:text-xs hover:bg-opacity-40 transition-all">
+                                            Brioche rolls
+                                        </button>
+                                        <button
+                                            class="w-full bg-teal-600 bg-opacity-30 text-teal-800 px-4 sm:px-2 py-2 sm:py-1 rounded-full font-outfit font-medium text-sm sm:text-xs hover:bg-opacity-40 transition-all">
+                                            Milk bread
+                                        </button>
+                                        <button
+                                            class="w-full bg-teal-600 bg-opacity-30 text-teal-800 px-4 sm:px-2 py-2 sm:py-1 rounded-full font-outfit font-medium text-sm sm:text-xs hover:bg-opacity-40 transition-all">
+                                            Custard tart
                                         </button>
                                     </div>
                                 </div>

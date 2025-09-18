@@ -145,415 +145,6 @@
     <!-- Menu Items Section -->
     <section class="py-20 bg-cream">
         <div class="max-w-7xl mx-auto px-6">
-            <!-- Pie & Tarts Section -->
-            <div class="menu-category mb-16" data-category="tarts">
-                <div class="bg-white rounded-3xl p-8 lg:p-12 card-shadow">
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-12">
-                        <div>
-                            <h2 class="text-5xl lg:text-6xl font-black text-warm-brown font-outfit leading-tight mb-4">
-                                Pie & Tart
-                            </h2>
-                            <p class="text-gray-700 font-outfit text-lg mb-4">
-                                A minimum of <span class="bg-banana px-2 py-1 rounded font-semibold">4 pieces</span> of
-                                Tarts per order is required.
-                            </p>
-                        </div>
-                        <div class="flex justify-center">
-                            <img src="assets/Items/tart.jpeg" alt="Tart"
-                                class="w-64 h-64 object-cover rounded-full shadow-xl">
-                        </div>
-                    </div>
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div class="menu-item bg-white p-6 rounded-2xl shadow-md" data-name="mango cheese tart"
-                            data-price="135">
-                            <div class="flex justify-between items-center">
-                                <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Mango Cheese Tart</h3>
-                                </div>
-                                <div class="text-right">
-                                    <span
-                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">135
-                                        tk/pc.</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="menu-item bg-white p-6 rounded-2xl shadow-md" data-name="hokkaido cheese tart"
-                            data-price="125">
-                            <div class="flex justify-between items-center">
-                                <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Hokkaido Cheese Tart
-                                    </h3>
-                                </div>
-                                <div class="text-right">
-                                    <span
-                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">125
-                                        tk/pc.</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="menu-item bg-white p-6 rounded-2xl shadow-md" data-name="egg tart" data-price="120">
-                            <div class="flex justify-between items-center">
-                                <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Egg Tart</h3>
-                                </div>
-                                <div class="text-right">
-                                    <span
-                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">120
-                                        tk/pc.</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="menu-item bg-white p-6 rounded-2xl shadow-md" data-name="chocolate cheese tart"
-                            data-price="125">
-                            <div class="flex justify-between items-center">
-                                <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Chocolate Cheese Tart
-                                    </h3>
-                                </div>
-                                <div class="text-right">
-                                    <span
-                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">125
-                                        tk/pc.</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="menu-item bg-white p-6 rounded-2xl shadow-md" data-name="custard tart"
-                            data-price="120">
-                            <div class="flex justify-between items-center">
-                                <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Custard Tart</h3>
-                                </div>
-                                <div class="text-right">
-                                    <span
-                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">120
-                                        tk/pc.</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="menu-item bg-white p-6 rounded-2xl shadow-md relative" data-name="lemon tart"
-                            data-price="150">
-                            <div class="absolute -top-2 -left-2">
-                                <div
-                                    class="bg-banana text-warm-brown px-3 py-1 rounded-full text-sm font-bold transform -rotate-12">
-                                    New!
-                                </div>
-                            </div>
-                            <div class="flex justify-between items-center">
-                                <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Lemon Tart</h3>
-                                </div>
-                                <div class="text-right">
-                                    <span
-                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">150
-                                        tk/pc.</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Bagels Section -->
-            <div class="menu-category mb-16" data-category="bagels">
-                <div class="bg-white rounded-3xl p-8 lg:p-12 card-shadow">
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-12">
-                        <div>
-                            <h2 class="text-5xl lg:text-6xl font-black text-warm-brown font-outfit leading-tight mb-4">
-                                Bagels
-                            </h2>
-                            <p class="text-gray-700 font-outfit text-lg mb-4">
-                                A minimum of <span class="bg-banana px-2 py-1 rounded font-semibold">6 bagels</span> per
-                                order is required.
-                            </p>
-                        </div>
-                        <div class="flex justify-center">
-                            <img src="assets/Items/Bagels.jpeg" alt="Bagel"
-                                class="w-64 h-64 object-cover rounded-full shadow-xl">
-                        </div>
-                    </div>
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div class="menu-item bg-white p-6 rounded-2xl shadow-md relative"
-                            data-name="cinnamon raisin bagel" data-price="95">
-                            <div class="absolute -top-2 -left-2">
-                                <div
-                                    class="bg-banana text-warm-brown px-3 py-1 rounded-full text-sm font-bold transform -rotate-12">
-                                    New!
-                                </div>
-                            </div>
-                            <div class="flex justify-between items-center">
-                                <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Cinnamon Raisin Bagel
-                                    </h3>
-                                    <p class="text-gray-600 font-outfit text-sm">(~ 90 gm)</p>
-                                </div>
-                                <div class="text-right">
-                                    <span
-                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">95
-                                        tk/pc.</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="menu-item bg-white p-6 rounded-2xl shadow-md" data-name="plain bagel"
-                            data-price="80">
-                            <div class="flex justify-between items-center">
-                                <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Plain Bagel</h3>
-                                    <p class="text-gray-600 font-outfit text-sm">(~ 90 gm)</p>
-                                </div>
-                                <div class="text-right">
-                                    <span
-                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">80
-                                        tk/pc.</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="menu-item bg-white p-6 rounded-2xl shadow-md" data-name="sesame bagel"
-                            data-price="80">
-                            <div class="flex justify-between items-center">
-                                <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Sesame Bagel</h3>
-                                    <p class="text-gray-600 font-outfit text-sm">(~ 90 gm)</p>
-                                </div>
-                                <div class="text-right">
-                                    <span
-                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">80
-                                        tk/pc.</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="menu-item bg-white p-6 rounded-2xl shadow-md" data-name="mixed seed bagel"
-                            data-price="90">
-                            <div class="flex justify-between items-center">
-                                <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Mixed Seed Bagel</h3>
-                                    <p class="text-gray-600 font-outfit text-sm">(~ 90 gm)</p>
-                                </div>
-                                <div class="text-right">
-                                    <span
-                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">90
-                                        tk/pc.</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="menu-item bg-white p-6 rounded-2xl shadow-md" data-name="chia bagel"
-                            data-price="90">
-                            <div class="flex justify-between items-center">
-                                <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Chia Bagel</h3>
-                                    <p class="text-gray-600 font-outfit text-sm">(~ 90 gm)</p>
-                                </div>
-                                <div class="text-right">
-                                    <span
-                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">90
-                                        tk/pc.</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="menu-item bg-white p-6 rounded-2xl shadow-md" data-name="cheese bagel"
-                            data-price="100">
-                            <div class="flex justify-between items-center">
-                                <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Cheese Bagel</h3>
-                                    <p class="text-gray-600 font-outfit text-sm">(~ 90 gm)</p>
-                                </div>
-                                <div class="text-right">
-                                    <span
-                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">100
-                                        tk/pc.</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="menu-item bg-white p-6 rounded-2xl shadow-md" data-name="black sesame bagel"
-                            data-price="95">
-                            <div class="flex justify-between items-center">
-                                <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Black Sesame Bagel</h3>
-                                    <p class="text-gray-600 font-outfit text-sm">(~ 90 gm)</p>
-                                </div>
-                                <div class="text-right">
-                                    <span
-                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">95
-                                        tk/pc.</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="menu-item bg-white p-6 rounded-2xl shadow-md" data-name="bagel bunch"
-                            data-price="500">
-                            <div class="flex justify-between items-center">
-                                <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Bagel Bunch</h3>
-                                    <p class="text-gray-600 font-outfit text-sm">(A set of Plain, Cheese, White Sesame, Black Sesame, Chia and Mixed Seed Bagel)</p>
-                                </div>
-                                <div class="text-right">
-                                    <span
-                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">500
-                                        tk/set</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="menu-item bg-white p-6 rounded-2xl shadow-md" data-name="garlic herb bagel"
-                            data-price="0">
-                            <div class="flex justify-between items-center">
-                                <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Garlic Herb Bagel</h3>
-                                    <p class="text-gray-600 font-outfit text-sm">(~ 90 gm)</p>
-                                </div>
-                                <div class="text-right">
-                                    <span
-                                        class="text-lg font-semibold text-orange-600 font-outfit whitespace-nowrap">Coming
-                                        soon!</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="menu-item bg-white p-6 rounded-2xl shadow-md" data-name="everything bagel"
-                            data-price="0">
-                            <div class="flex justify-between items-center">
-                                <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Everything Bagel</h3>
-                                    <p class="text-gray-600 font-outfit text-sm">(~ 90 gm)</p>
-                                </div>
-                                <div class="text-right">
-                                    <span
-                                        class="text-lg font-semibold text-orange-600 font-outfit whitespace-nowrap">Coming
-                                        soon!</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Buns & Rolls Section -->
-            <div class="menu-category mb-16" data-category="buns">
-                <div class="bg-white rounded-3xl p-8 lg:p-12 card-shadow">
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-12">
-                        <div class="order-2 lg:order-1">
-                            <img src="assets/Items/roll.jpeg" alt="Buns and Rolls"
-                                class="w-64 h-64 object-cover rounded-full shadow-xl mx-auto">
-                        </div>
-                        <div class="order-1 lg:order-2">
-                            <h2 class="text-5xl lg:text-6xl font-black text-warm-brown font-outfit leading-tight mb-4">
-                                Buns & Rolls
-                            </h2>
-                        </div>
-                    </div>
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div class="menu-item bg-white p-6 rounded-2xl shadow-md" data-name="burger bun"
-                            data-price="50">
-                            <div class="flex justify-between items-center">
-                                <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Burger Bun</h3>
-                                    <p class="text-gray-600 font-outfit text-sm">(~ 90 gm) (minimum 6 pieces)</p>
-                                </div>
-                                <div class="text-right">
-                                    <span
-                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">50
-                                        tk/pc.</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="menu-item bg-white p-6 rounded-2xl shadow-md" data-name="brioche burger bun"
-                            data-price="65">
-                            <div class="flex justify-between items-center">
-                                <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Brioche Burger Bun</h3>
-                                    <p class="text-gray-600 font-outfit text-sm">(~ 90 gm) (minimum 6 pieces)</p>
-                                </div>
-                                <div class="text-right">
-                                    <span
-                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">65
-                                        tk/pc.</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="menu-item bg-white p-6 rounded-2xl shadow-md" data-name="mini burger bun"
-                            data-price="35">
-                            <div class="flex justify-between items-center">
-                                <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Mini Burger Bun</h3>
-                                    <p class="text-gray-600 font-outfit text-sm">(~ 35 gm) (minimum 12 pieces)</p>
-                                </div>
-                                <div class="text-right">
-                                    <span
-                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">35
-                                        tk/pc.</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="menu-item bg-white p-6 rounded-2xl shadow-md" data-name="sourdough bun"
-                            data-price="65">
-                            <div class="flex justify-between items-center">
-                                <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Sourdough Bun</h3>
-                                    <p class="text-gray-600 font-outfit text-sm">(~ 90 gm) (minimum 10 pieces)</p>
-                                </div>
-                                <div class="text-right">
-                                    <span
-                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">65
-                                        tk/pc.</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="menu-item bg-white p-6 rounded-2xl shadow-md" data-name="brioche roll"
-                            data-price="60">
-                            <div class="flex justify-between items-center">
-                                <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Brioche Roll</h3>
-                                    <p class="text-gray-600 font-outfit text-sm">(~ 90 gm) (minimum 6 pieces)</p>
-                                </div>
-                                <div class="text-right">
-                                    <span
-                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">60
-                                        tk/pc.</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="menu-item bg-white p-6 rounded-2xl shadow-md relative" data-name="hot cross bun"
-                            data-price="85">
-                            <div class="absolute -top-2 -left-2">
-                                <div
-                                    class="bg-banana text-warm-brown px-3 py-1 rounded-full text-sm font-bold transform -rotate-12">
-                                    New!
-                                </div>
-                            </div>
-                            <div class="flex justify-between items-center">
-                                <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Hot Cross Bun</h3>
-                                    <p class="text-gray-600 font-outfit text-sm">(minimum 6 pieces)</p>
-                                </div>
-                                <div class="text-right">
-                                    <span
-                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">85
-                                        tk/pc.</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
             <!-- Breads Section -->
             <div class="menu-category mb-16" data-category="breads">
                 <div class="bg-white rounded-3xl p-8 lg:p-12 card-shadow">
@@ -758,6 +349,7 @@
                                 <div>
                                     <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Regular Ciabatta Bread
                                     </h3>
+                                    <p class="text-gray-600 font-outfit text-sm">(~180 gm) (Minimum 4 pieces)</p>
                                 </div>
                                 <div class="text-right">
                                     <span
@@ -767,8 +359,14 @@
                             </div>
                         </div>
 
-                        <div class="menu-item bg-white p-6 rounded-2xl shadow-md" data-name="premium ciabatta bread"
-                            data-price="100">
+                        <div class="menu-item bg-white p-6 rounded-2xl shadow-md relative"
+                            data-name="premium ciabatta bread" data-price="100">
+                            <div class="absolute -top-2 -left-2">
+                                <div
+                                    class="bg-banana text-warm-brown px-3 py-1 rounded-full text-sm font-bold transform -rotate-12">
+                                    New!
+                                </div>
+                            </div>
                             <div class="flex justify-between items-center">
                                 <div>
                                     <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Premium Ciabatta Bread
@@ -776,8 +374,8 @@
                                 </div>
                                 <div class="text-right">
                                     <span
-                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">100
-                                        tk/loaf</span>
+                                        class="text-lg font-semibold text-orange-600 font-outfit whitespace-nowrap">Coming
+                                        soon!</span>
                                 </div>
                             </div>
                         </div>
@@ -802,21 +400,99 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Gluten Free Section -->
-            <div class="menu-category mb-16" data-category="gluten-free">
+            <!-- Buns & Rolls Section -->
+            <div class="menu-category mb-16" data-category="buns">
                 <div class="bg-white rounded-3xl p-8 lg:p-12 card-shadow">
                     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-12">
-                        <div>
+                        <div class="order-2 lg:order-1">
+                            <img src="assets/Items/roll.jpeg" alt="Buns and Rolls"
+                                class="w-64 h-64 object-cover rounded-full shadow-xl mx-auto">
+                        </div>
+                        <div class="order-1 lg:order-2">
                             <h2 class="text-5xl lg:text-6xl font-black text-warm-brown font-outfit leading-tight mb-4">
-                                Gluten Free
+                                Buns & Rolls
                             </h2>
                         </div>
                     </div>
 
-                    <div class="grid grid-cols-1 gap-6">
-                        <div class="menu-item bg-white p-6 rounded-2xl shadow-md relative"
-                            data-name="regular ragi bread" data-price="0">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="menu-item bg-white p-6 rounded-2xl shadow-md" data-name="burger bun"
+                            data-price="50">
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Burger Bun</h3>
+                                    <p class="text-gray-600 font-outfit text-sm">(~ 90 gm) (minimum 6 pieces)</p>
+                                </div>
+                                <div class="text-right">
+                                    <span
+                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">50
+                                        tk/pc.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="menu-item bg-white p-6 rounded-2xl shadow-md" data-name="brioche burger bun"
+                            data-price="65">
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Brioche Burger Bun</h3>
+                                    <p class="text-gray-600 font-outfit text-sm">(~ 90 gm) (minimum 6 pieces)</p>
+                                </div>
+                                <div class="text-right">
+                                    <span
+                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">65
+                                        tk/pc.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="menu-item bg-white p-6 rounded-2xl shadow-md" data-name="mini burger bun"
+                            data-price="35">
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Mini Burger Bun</h3>
+                                    <p class="text-gray-600 font-outfit text-sm">(~ 35 gm) (minimum 12 pieces)</p>
+                                </div>
+                                <div class="text-right">
+                                    <span
+                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">35
+                                        tk/pc.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="menu-item bg-white p-6 rounded-2xl shadow-md" data-name="sourdough bun"
+                            data-price="65">
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Sourdough Bun</h3>
+                                    <p class="text-gray-600 font-outfit text-sm">(~ 90 gm) (minimum 10 pieces)</p>
+                                </div>
+                                <div class="text-right">
+                                    <span
+                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">65
+                                        tk/pc.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="menu-item bg-white p-6 rounded-2xl shadow-md" data-name="brioche roll"
+                            data-price="60">
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Brioche Roll</h3>
+                                    <p class="text-gray-600 font-outfit text-sm">(~ 90 gm) (minimum 6 pieces)</p>
+                                </div>
+                                <div class="text-right">
+                                    <span
+                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">60
+                                        tk/pc.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="menu-item bg-white p-6 rounded-2xl shadow-md relative" data-name="hot cross bun"
+                            data-price="85">
                             <div class="absolute -top-2 -left-2">
                                 <div
                                     class="bg-banana text-warm-brown px-3 py-1 rounded-full text-sm font-bold transform -rotate-12">
@@ -825,7 +501,173 @@
                             </div>
                             <div class="flex justify-between items-center">
                                 <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Regular Ragi Bread</h3>
+                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Hot Cross Bun</h3>
+                                    <p class="text-gray-600 font-outfit text-sm">(minimum 6 pieces)</p>
+                                </div>
+                                <div class="text-right">
+                                    <span
+                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">85
+                                        tk/pc.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Bagels Section -->
+            <div class="menu-category mb-16" data-category="bagels">
+                <div class="bg-white rounded-3xl p-8 lg:p-12 card-shadow">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-12">
+                        <div>
+                            <h2 class="text-5xl lg:text-6xl font-black text-warm-brown font-outfit leading-tight mb-4">
+                                Bagels
+                            </h2>
+                            <p class="text-gray-700 font-outfit text-lg mb-4">
+                                A minimum of <span class="bg-banana px-2 py-1 rounded font-semibold">6 bagels</span> per
+                                order is required.
+                            </p>
+                        </div>
+                        <div class="flex justify-center">
+                            <img src="assets/Items/Bagels.jpeg" alt="Bagel"
+                                class="w-64 h-64 object-cover rounded-full shadow-xl">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="menu-item bg-white p-6 rounded-2xl shadow-md relative"
+                            data-name="cinnamon raisin bagel" data-price="95">
+                            <div class="absolute -top-2 -left-2">
+                                <div
+                                    class="bg-banana text-warm-brown px-3 py-1 rounded-full text-sm font-bold transform -rotate-12">
+                                    New!
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Cinnamon Raisin Bagel
+                                    </h3>
+                                    <p class="text-gray-600 font-outfit text-sm">(~ 90 gm)</p>
+                                </div>
+                                <div class="text-right">
+                                    <span
+                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">95
+                                        tk/pc.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="menu-item bg-white p-6 rounded-2xl shadow-md" data-name="plain bagel"
+                            data-price="80">
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Plain Bagel</h3>
+                                    <p class="text-gray-600 font-outfit text-sm">(~ 90 gm)</p>
+                                </div>
+                                <div class="text-right">
+                                    <span
+                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">80
+                                        tk/pc.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="menu-item bg-white p-6 rounded-2xl shadow-md" data-name="sesame bagel"
+                            data-price="80">
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Sesame Bagel</h3>
+                                    <p class="text-gray-600 font-outfit text-sm">(~ 90 gm)</p>
+                                </div>
+                                <div class="text-right">
+                                    <span
+                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">80
+                                        tk/pc.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="menu-item bg-white p-6 rounded-2xl shadow-md" data-name="mixed seed bagel"
+                            data-price="90">
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Mixed Seed Bagel</h3>
+                                    <p class="text-gray-600 font-outfit text-sm">(~ 90 gm)</p>
+                                </div>
+                                <div class="text-right">
+                                    <span
+                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">90
+                                        tk/pc.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="menu-item bg-white p-6 rounded-2xl shadow-md" data-name="chia bagel"
+                            data-price="90">
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Chia Bagel</h3>
+                                    <p class="text-gray-600 font-outfit text-sm">(~ 90 gm)</p>
+                                </div>
+                                <div class="text-right">
+                                    <span
+                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">90
+                                        tk/pc.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="menu-item bg-white p-6 rounded-2xl shadow-md" data-name="cheese bagel"
+                            data-price="100">
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Cheese Bagel</h3>
+                                    <p class="text-gray-600 font-outfit text-sm">(~ 90 gm)</p>
+                                </div>
+                                <div class="text-right">
+                                    <span
+                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">100
+                                        tk/pc.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="menu-item bg-white p-6 rounded-2xl shadow-md" data-name="black sesame bagel"
+                            data-price="95">
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Black Sesame Bagel</h3>
+                                    <p class="text-gray-600 font-outfit text-sm">(~ 90 gm)</p>
+                                </div>
+                                <div class="text-right">
+                                    <span
+                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">95
+                                        tk/pc.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="menu-item bg-white p-6 rounded-2xl shadow-md" data-name="bagel bunch"
+                            data-price="500">
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Bagel Bunch</h3>
+                                    <p class="text-gray-600 font-outfit text-sm">(A set of Plain, Cheese, White Sesame,
+                                        Black Sesame, Chia and Mixed Seed Bagel)</p>
+                                </div>
+                                <div class="text-right">
+                                    <span
+                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">500
+                                        tk/set</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="menu-item bg-white p-6 rounded-2xl shadow-md" data-name="garlic herb bagel"
+                            data-price="0">
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Garlic Herb Bagel</h3>
+                                    <p class="text-gray-600 font-outfit text-sm">(~ 90 gm)</p>
                                 </div>
                                 <div class="text-right">
                                     <span
@@ -835,17 +677,12 @@
                             </div>
                         </div>
 
-                        <div class="menu-item bg-white p-6 rounded-2xl shadow-md relative"
-                            data-name="premium ragi bread" data-price="0">
-                            <div class="absolute -top-2 -left-2">
-                                <div
-                                    class="bg-banana text-warm-brown px-3 py-1 rounded-full text-sm font-bold transform -rotate-12">
-                                    New!
-                                </div>
-                            </div>
+                        <div class="menu-item bg-white p-6 rounded-2xl shadow-md" data-name="everything bagel"
+                            data-price="0">
                             <div class="flex justify-between items-center">
                                 <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Premium Ragi Bread</h3>
+                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Everything Bagel</h3>
+                                    <p class="text-gray-600 font-outfit text-sm">(~ 90 gm)</p>
                                 </div>
                                 <div class="text-right">
                                     <span
@@ -857,7 +694,6 @@
                     </div>
                 </div>
             </div>
-
             <!-- Desserts Section -->
             <div class="menu-category mb-16" data-category="desserts">
                 <div class="bg-white rounded-3xl p-8 lg:p-12 card-shadow">
@@ -917,21 +753,6 @@
                                 <div class="text-right">
                                     <span
                                         class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">130
-                                        tk/pc.</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="menu-item bg-white p-6 rounded-2xl shadow-md" data-name="oatmeal brownie"
-                            data-price="180">
-                            <div class="flex justify-between items-center">
-                                <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Oatmeal Brownie</h3>
-                                    <p class="text-gray-600 font-outfit text-sm">(minimum 16 pieces)</p>
-                                </div>
-                                <div class="text-right">
-                                    <span
-                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">180
                                         tk/pc.</span>
                                 </div>
                             </div>
@@ -1014,6 +835,181 @@
                     </div>
                 </div>
             </div>
+            <!-- Pie & Tarts Section -->
+            <div class="menu-category mb-16" data-category="tarts">
+                <div class="bg-white rounded-3xl p-8 lg:p-12 card-shadow">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-12">
+                        <div>
+                            <h2 class="text-5xl lg:text-6xl font-black text-warm-brown font-outfit leading-tight mb-4">
+                                Pie & Tart
+                            </h2>
+                            <p class="text-gray-700 font-outfit text-lg mb-4">
+                                A minimum of <span class="bg-banana px-2 py-1 rounded font-semibold">4 pieces</span> of
+                                Tarts per order is required.
+                            </p>
+                        </div>
+                        <div class="flex justify-center">
+                            <img src="assets/Items/tart.jpeg" alt="Tart"
+                                class="w-64 h-64 object-cover rounded-full shadow-xl">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="menu-item bg-white p-6 rounded-2xl shadow-md" data-name="mango cheese tart"
+                            data-price="135">
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Mango Cheese Tart</h3>
+                                </div>
+                                <div class="text-right">
+                                    <span
+                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">135
+                                        tk/pc.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="menu-item bg-white p-6 rounded-2xl shadow-md" data-name="hokkaido cheese tart"
+                            data-price="125">
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Hokkaido Cheese Tart
+                                    </h3>
+                                </div>
+                                <div class="text-right">
+                                    <span
+                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">125
+                                        tk/pc.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="menu-item bg-white p-6 rounded-2xl shadow-md" data-name="egg tart" data-price="120">
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Egg Tart</h3>
+                                </div>
+                                <div class="text-right">
+                                    <span
+                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">120
+                                        tk/pc.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="menu-item bg-white p-6 rounded-2xl shadow-md" data-name="chocolate cheese tart"
+                            data-price="125">
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Chocolate Cheese Tart
+                                    </h3>
+                                </div>
+                                <div class="text-right">
+                                    <span
+                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">125
+                                        tk/pc.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="menu-item bg-white p-6 rounded-2xl shadow-md" data-name="custard tart"
+                            data-price="120">
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Custard Tart</h3>
+                                </div>
+                                <div class="text-right">
+                                    <span
+                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">120
+                                        tk/pc.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="menu-item bg-white p-6 rounded-2xl shadow-md relative" data-name="lemon tart"
+                            data-price="150">
+                            <div class="absolute -top-2 -left-2">
+                                <div
+                                    class="bg-banana text-warm-brown px-3 py-1 rounded-full text-sm font-bold transform -rotate-12">
+                                    New!
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Lemon Tart</h3>
+                                </div>
+                                <div class="text-right">
+                                    <span
+                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">150
+                                        tk/pc.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+            <!-- Gluten Free Section -->
+            <div class="menu-category mb-16" data-category="gluten-free">
+                <div class="bg-white rounded-3xl p-8 lg:p-12 card-shadow">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-12">
+                        <div>
+                            <h2 class="text-5xl lg:text-6xl font-black text-warm-brown font-outfit leading-tight mb-4">
+                                Gluten Free
+                            </h2>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 gap-6">
+                        <div class="menu-item bg-white p-6 rounded-2xl shadow-md relative"
+                            data-name="regular ragi bread" data-price="0">
+                            <div class="absolute -top-2 -left-2">
+                                <div
+                                    class="bg-banana text-warm-brown px-3 py-1 rounded-full text-sm font-bold transform -rotate-12">
+                                    New!
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Regular Ragi Bread</h3>
+                                </div>
+                                <div class="text-right">
+                                    <span
+                                        class="text-lg font-semibold text-orange-600 font-outfit whitespace-nowrap">Coming
+                                        soon!</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="menu-item bg-white p-6 rounded-2xl shadow-md relative"
+                            data-name="premium ragi bread" data-price="0">
+                            <div class="absolute -top-2 -left-2">
+                                <div
+                                    class="bg-banana text-warm-brown px-3 py-1 rounded-full text-sm font-bold transform -rotate-12">
+                                    New!
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Premium Ragi Bread</h3>
+                                </div>
+                                <div class="text-right">
+                                    <span
+                                        class="text-lg font-semibold text-orange-600 font-outfit whitespace-nowrap">Coming
+                                        soon!</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
 
             <!-- No Results Message -->
             <div id="noResults" class="text-center py-20 hidden">
