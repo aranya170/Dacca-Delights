@@ -390,7 +390,7 @@
                                     </p>
 
                                     <!-- Learn Baking Button -->
-                                    <a href="https://wa.me/8801622823269?text=I%20would%20like%20to%20place%20an%20order"
+                                    <a href="https://wa.me/8801622823269?text=I%20would%20like%20to%20share%20my%20#MadeWithLoaf"
                                         target="_blank">
                                         <button
                                             class="bg-banana text-warm-brown font-bold py-4 sm:py-3 px-8 sm:px-6 rounded-full btn-hover text-lg sm:text-base font-outfit">
