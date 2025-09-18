@@ -3,9 +3,10 @@
         <div class="flex justify-between items-center">
             <!-- Logo -->
             <div class="flex items-center space-x-3">
-                <a href="index.php" class="w-16 h-16 sm:w-12 sm:h-12 md:w-24 md:h-24 rounded-full flex items-center justify-center">
+                <a href="index.php"
+                    class="w-32 h-32 sm:w-20 sm:h-20 md:w-32 md:h-32 rounded-full flex items-center justify-center">
                     <img src="assets/logo/Logo_Dacca Delights-03.svg" alt="Dacca Delights Logo"
-                        class="w-32 h-32 sm:w-24 sm:h-24 md:w-48 md:h-48 object-contain">
+                        class="w-32 h-32 sm:w-32 sm:h-32 md:w-32 md:h-32 object-contain">
                 </a>
             </div>
 

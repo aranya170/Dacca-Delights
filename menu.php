@@ -56,6 +56,21 @@
 
     .menu-item:hover {
         transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    @media (max-width: 767px) {
+        .menu-item h3 {
+            font-size: 1.125rem;
+            /* equivalent to text-lg */
+            line-height: 1.75rem;
+        }
+
+        .menu-item span {
+            font-size: 1.25rem;
+            /* equivalent to text-xl */
+            line-height: 1.75rem;
+        }
     }
     </style>
 </head>
@@ -92,19 +107,10 @@
                         </button>
                         <button
                             class="filter-btn bg-gray-200 text-gray-700 px-4 py-2 rounded-full font-outfit font-semibold btn-hover text-sm"
-                            data-category="tarts">
-                            Tarts
-                        </button>
-                        <button
-                            class="filter-btn bg-gray-200 text-gray-700 px-4 py-2 rounded-full font-outfit font-semibold btn-hover text-sm"
                             data-category="bagels">
                             Bagels
                         </button>
-                        <button
-                            class="filter-btn bg-gray-200 text-gray-700 px-4 py-2 rounded-full font-outfit font-semibold btn-hover text-sm"
-                            data-category="desserts">
-                            Desserts
-                        </button>
+
                         <button
                             class="filter-btn bg-gray-200 text-gray-700 px-4 py-2 rounded-full font-outfit font-semibold btn-hover text-sm"
                             data-category="breads">
@@ -114,6 +120,16 @@
                             class="filter-btn bg-gray-200 text-gray-700 px-4 py-2 rounded-full font-outfit font-semibold btn-hover text-sm"
                             data-category="buns">
                             Buns & Rolls
+                        </button>
+                        <button
+                            class="filter-btn bg-gray-200 text-gray-700 px-4 py-2 rounded-full font-outfit font-semibold btn-hover text-sm"
+                            data-category="desserts">
+                            Desserts
+                        </button>
+                        <button
+                            class="filter-btn bg-gray-200 text-gray-700 px-4 py-2 rounded-full font-outfit font-semibold btn-hover text-sm"
+                            data-category="tarts">
+                            Tarts
                         </button>
                         <button
                             class="filter-btn bg-gray-200 text-gray-700 px-4 py-2 rounded-full font-outfit font-semibold btn-hover text-sm"
@@ -153,10 +169,12 @@
                             data-price="135">
                             <div class="flex justify-between items-center">
                                 <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit">Mango Cheese Tart</h3>
+                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Mango Cheese Tart</h3>
                                 </div>
                                 <div class="text-right">
-                                    <span class="text-2xl font-bold text-gray-800 font-outfit">135 tk/pc.</span>
+                                    <span
+                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">135
+                                        tk/pc.</span>
                                 </div>
                             </div>
                         </div>
@@ -165,10 +183,13 @@
                             data-price="125">
                             <div class="flex justify-between items-center">
                                 <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit">Hokkaido Cheese Tart</h3>
+                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Hokkaido Cheese Tart
+                                    </h3>
                                 </div>
                                 <div class="text-right">
-                                    <span class="text-2xl font-bold text-gray-800 font-outfit">125 tk/pc.</span>
+                                    <span
+                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">125
+                                        tk/pc.</span>
                                 </div>
                             </div>
                         </div>
@@ -176,10 +197,12 @@
                         <div class="menu-item bg-white p-6 rounded-2xl shadow-md" data-name="egg tart" data-price="120">
                             <div class="flex justify-between items-center">
                                 <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit">Egg Tart</h3>
+                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Egg Tart</h3>
                                 </div>
                                 <div class="text-right">
-                                    <span class="text-2xl font-bold text-gray-800 font-outfit">120 tk/pc.</span>
+                                    <span
+                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">120
+                                        tk/pc.</span>
                                 </div>
                             </div>
                         </div>
@@ -188,10 +211,13 @@
                             data-price="125">
                             <div class="flex justify-between items-center">
                                 <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit">Chocolate Cheese Tart</h3>
+                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Chocolate Cheese Tart
+                                    </h3>
                                 </div>
                                 <div class="text-right">
-                                    <span class="text-2xl font-bold text-gray-800 font-outfit">125 tk/pc.</span>
+                                    <span
+                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">125
+                                        tk/pc.</span>
                                 </div>
                             </div>
                         </div>
@@ -200,10 +226,12 @@
                             data-price="120">
                             <div class="flex justify-between items-center">
                                 <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit">Custard Tart</h3>
+                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Custard Tart</h3>
                                 </div>
                                 <div class="text-right">
-                                    <span class="text-2xl font-bold text-gray-800 font-outfit">120 tk/pc.</span>
+                                    <span
+                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">120
+                                        tk/pc.</span>
                                 </div>
                             </div>
                         </div>
@@ -218,10 +246,12 @@
                             </div>
                             <div class="flex justify-between items-center">
                                 <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit">Lemon Tart</h3>
+                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Lemon Tart</h3>
                                 </div>
                                 <div class="text-right">
-                                    <span class="text-2xl font-bold text-gray-800 font-outfit">150 tk/pc.</span>
+                                    <span
+                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">150
+                                        tk/pc.</span>
                                 </div>
                             </div>
                         </div>
@@ -259,11 +289,14 @@
                             </div>
                             <div class="flex justify-between items-center">
                                 <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit">Cinnamon Raisin Bagel</h3>
+                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Cinnamon Raisin Bagel
+                                    </h3>
                                     <p class="text-gray-600 font-outfit text-sm">(~ 90 gm)</p>
                                 </div>
                                 <div class="text-right">
-                                    <span class="text-2xl font-bold text-gray-800 font-outfit">95 tk/pc.</span>
+                                    <span
+                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">95
+                                        tk/pc.</span>
                                 </div>
                             </div>
                         </div>
@@ -272,11 +305,13 @@
                             data-price="80">
                             <div class="flex justify-between items-center">
                                 <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit">Plain Bagel</h3>
+                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Plain Bagel</h3>
                                     <p class="text-gray-600 font-outfit text-sm">(~ 90 gm)</p>
                                 </div>
                                 <div class="text-right">
-                                    <span class="text-2xl font-bold text-gray-800 font-outfit">80 tk/pc.</span>
+                                    <span
+                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">80
+                                        tk/pc.</span>
                                 </div>
                             </div>
                         </div>
@@ -285,11 +320,13 @@
                             data-price="80">
                             <div class="flex justify-between items-center">
                                 <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit">Sesame Bagel</h3>
+                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Sesame Bagel</h3>
                                     <p class="text-gray-600 font-outfit text-sm">(~ 90 gm)</p>
                                 </div>
                                 <div class="text-right">
-                                    <span class="text-2xl font-bold text-gray-800 font-outfit">80 tk/pc.</span>
+                                    <span
+                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">80
+                                        tk/pc.</span>
                                 </div>
                             </div>
                         </div>
@@ -298,11 +335,13 @@
                             data-price="90">
                             <div class="flex justify-between items-center">
                                 <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit">Mixed Seed Bagel</h3>
+                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Mixed Seed Bagel</h3>
                                     <p class="text-gray-600 font-outfit text-sm">(~ 90 gm)</p>
                                 </div>
                                 <div class="text-right">
-                                    <span class="text-2xl font-bold text-gray-800 font-outfit">90 tk/pc.</span>
+                                    <span
+                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">90
+                                        tk/pc.</span>
                                 </div>
                             </div>
                         </div>
@@ -311,11 +350,13 @@
                             data-price="90">
                             <div class="flex justify-between items-center">
                                 <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit">Chia Bagel</h3>
+                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Chia Bagel</h3>
                                     <p class="text-gray-600 font-outfit text-sm">(~ 90 gm)</p>
                                 </div>
                                 <div class="text-right">
-                                    <span class="text-2xl font-bold text-gray-800 font-outfit">90 tk/pc.</span>
+                                    <span
+                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">90
+                                        tk/pc.</span>
                                 </div>
                             </div>
                         </div>
@@ -324,11 +365,13 @@
                             data-price="100">
                             <div class="flex justify-between items-center">
                                 <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit">Cheese Bagel</h3>
+                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Cheese Bagel</h3>
                                     <p class="text-gray-600 font-outfit text-sm">(~ 90 gm)</p>
                                 </div>
                                 <div class="text-right">
-                                    <span class="text-2xl font-bold text-gray-800 font-outfit">100 tk/pc.</span>
+                                    <span
+                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">100
+                                        tk/pc.</span>
                                 </div>
                             </div>
                         </div>
@@ -337,11 +380,13 @@
                             data-price="95">
                             <div class="flex justify-between items-center">
                                 <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit">Black Sesame Bagel</h3>
+                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Black Sesame Bagel</h3>
                                     <p class="text-gray-600 font-outfit text-sm">(~ 90 gm)</p>
                                 </div>
                                 <div class="text-right">
-                                    <span class="text-2xl font-bold text-gray-800 font-outfit">95 tk/pc.</span>
+                                    <span
+                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">95
+                                        tk/pc.</span>
                                 </div>
                             </div>
                         </div>
@@ -350,11 +395,13 @@
                             data-price="500">
                             <div class="flex justify-between items-center">
                                 <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit">Bagel Bunch</h3>
+                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Bagel Bunch</h3>
                                     <p class="text-gray-600 font-outfit text-sm">(A set of all 6 Bagels from above)</p>
                                 </div>
                                 <div class="text-right">
-                                    <span class="text-2xl font-bold text-gray-800 font-outfit">500 tk/set</span>
+                                    <span
+                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">500
+                                        tk/set</span>
                                 </div>
                             </div>
                         </div>
@@ -363,11 +410,13 @@
                             data-price="0">
                             <div class="flex justify-between items-center">
                                 <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit">Garlic Herb Bagel</h3>
+                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Garlic Herb Bagel</h3>
                                     <p class="text-gray-600 font-outfit text-sm">(~ 90 gm)</p>
                                 </div>
                                 <div class="text-right">
-                                    <span class="text-lg font-semibold text-orange-600 font-outfit">Coming soon!</span>
+                                    <span
+                                        class="text-lg font-semibold text-orange-600 font-outfit whitespace-nowrap">Coming
+                                        soon!</span>
                                 </div>
                             </div>
                         </div>
@@ -376,11 +425,13 @@
                             data-price="0">
                             <div class="flex justify-between items-center">
                                 <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit">Everything Bagel</h3>
+                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Everything Bagel</h3>
                                     <p class="text-gray-600 font-outfit text-sm">(~ 90 gm)</p>
                                 </div>
                                 <div class="text-right">
-                                    <span class="text-lg font-semibold text-orange-600 font-outfit">Coming soon!</span>
+                                    <span
+                                        class="text-lg font-semibold text-orange-600 font-outfit whitespace-nowrap">Coming
+                                        soon!</span>
                                 </div>
                             </div>
                         </div>
@@ -408,11 +459,13 @@
                             data-price="50">
                             <div class="flex justify-between items-center">
                                 <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit">Burger Bun</h3>
+                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Burger Bun</h3>
                                     <p class="text-gray-600 font-outfit text-sm">(~ 90 gm) (minimum 6 pieces)</p>
                                 </div>
                                 <div class="text-right">
-                                    <span class="text-2xl font-bold text-gray-800 font-outfit">50 tk/pc.</span>
+                                    <span
+                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">50
+                                        tk/pc.</span>
                                 </div>
                             </div>
                         </div>
@@ -421,11 +474,13 @@
                             data-price="65">
                             <div class="flex justify-between items-center">
                                 <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit">Brioche Burger Bun</h3>
+                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Brioche Burger Bun</h3>
                                     <p class="text-gray-600 font-outfit text-sm">(~ 90 gm) (minimum 6 pieces)</p>
                                 </div>
                                 <div class="text-right">
-                                    <span class="text-2xl font-bold text-gray-800 font-outfit">65 tk/pc.</span>
+                                    <span
+                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">65
+                                        tk/pc.</span>
                                 </div>
                             </div>
                         </div>
@@ -434,11 +489,13 @@
                             data-price="35">
                             <div class="flex justify-between items-center">
                                 <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit">Mini Burger Bun</h3>
+                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Mini Burger Bun</h3>
                                     <p class="text-gray-600 font-outfit text-sm">(~ 35 gm) (minimum 12 pieces)</p>
                                 </div>
                                 <div class="text-right">
-                                    <span class="text-2xl font-bold text-gray-800 font-outfit">35 tk/pc.</span>
+                                    <span
+                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">35
+                                        tk/pc.</span>
                                 </div>
                             </div>
                         </div>
@@ -447,11 +504,13 @@
                             data-price="65">
                             <div class="flex justify-between items-center">
                                 <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit">Sourdough Bun</h3>
+                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Sourdough Bun</h3>
                                     <p class="text-gray-600 font-outfit text-sm">(~ 90 gm) (minimum 10 pieces)</p>
                                 </div>
                                 <div class="text-right">
-                                    <span class="text-2xl font-bold text-gray-800 font-outfit">65 tk/pc.</span>
+                                    <span
+                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">65
+                                        tk/pc.</span>
                                 </div>
                             </div>
                         </div>
@@ -460,11 +519,13 @@
                             data-price="60">
                             <div class="flex justify-between items-center">
                                 <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit">Brioche Roll</h3>
+                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Brioche Roll</h3>
                                     <p class="text-gray-600 font-outfit text-sm">(~ 90 gm) (minimum 6 pieces)</p>
                                 </div>
                                 <div class="text-right">
-                                    <span class="text-2xl font-bold text-gray-800 font-outfit">60 tk/pc.</span>
+                                    <span
+                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">60
+                                        tk/pc.</span>
                                 </div>
                             </div>
                         </div>
@@ -479,11 +540,13 @@
                             </div>
                             <div class="flex justify-between items-center">
                                 <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit">Hot Cross Bun</h3>
+                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Hot Cross Bun</h3>
                                     <p class="text-gray-600 font-outfit text-sm">(minimum 6 pieces)</p>
                                 </div>
                                 <div class="text-right">
-                                    <span class="text-2xl font-bold text-gray-800 font-outfit">85 tk/pc.</span>
+                                    <span
+                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">85
+                                        tk/pc.</span>
                                 </div>
                             </div>
                         </div>
@@ -511,11 +574,13 @@
                             data-price="250">
                             <div class="flex justify-between items-center">
                                 <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit">Sandwich Bread</h3>
+                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Sandwich Bread</h3>
                                     <p class="text-gray-600 font-outfit text-sm">(~ 1000 gm)</p>
                                 </div>
                                 <div class="text-right">
-                                    <span class="text-2xl font-bold text-gray-800 font-outfit">250 tk/loaf</span>
+                                    <span
+                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">250
+                                        tk/loaf</span>
                                 </div>
                             </div>
                         </div>
@@ -524,11 +589,13 @@
                             data-price="350">
                             <div class="flex justify-between items-center">
                                 <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit">Sourdough Bread</h3>
+                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Sourdough Bread</h3>
                                     <p class="text-gray-600 font-outfit text-sm">(~ 650 gm)</p>
                                 </div>
                                 <div class="text-right">
-                                    <span class="text-2xl font-bold text-gray-800 font-outfit">350 tk/loaf</span>
+                                    <span
+                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">350
+                                        tk/loaf</span>
                                 </div>
                             </div>
                         </div>
@@ -537,12 +604,14 @@
                             data-name="sourdough bread whole wheat" data-price="420">
                             <div class="flex justify-between items-center">
                                 <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit">Sourdough Bread (Whole
+                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Sourdough Bread (Whole
                                         Wheat)</h3>
                                     <p class="text-gray-600 font-outfit text-sm">(~ 650 gm)</p>
                                 </div>
                                 <div class="text-right">
-                                    <span class="text-2xl font-bold text-gray-800 font-outfit">420 tk/loaf</span>
+                                    <span
+                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">420
+                                        tk/loaf</span>
                                 </div>
                             </div>
                         </div>
@@ -550,11 +619,13 @@
                         <div class="menu-item bg-white p-6 rounded-2xl shadow-md" data-name="baguette" data-price="300">
                             <div class="flex justify-between items-center">
                                 <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit">Baguette</h3>
+                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Baguette</h3>
                                     <p class="text-gray-600 font-outfit text-sm">(~ 400 gm)</p>
                                 </div>
                                 <div class="text-right">
-                                    <span class="text-2xl font-bold text-gray-800 font-outfit">300 tk/loaf</span>
+                                    <span
+                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">300
+                                        tk/loaf</span>
                                 </div>
                             </div>
                         </div>
@@ -569,11 +640,13 @@
                             </div>
                             <div class="flex justify-between items-center">
                                 <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit">Mini Baguette</h3>
+                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Mini Baguette</h3>
                                     <p class="text-gray-600 font-outfit text-sm">(~ 200 gm)</p>
                                 </div>
                                 <div class="text-right">
-                                    <span class="text-2xl font-bold text-gray-800 font-outfit">300 tk/pair</span>
+                                    <span
+                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">300
+                                        tk/pair</span>
                                 </div>
                             </div>
                         </div>
@@ -582,11 +655,13 @@
                             data-price="200">
                             <div class="flex justify-between items-center">
                                 <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit">Milk Bread</h3>
+                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Milk Bread</h3>
                                     <p class="text-gray-600 font-outfit text-sm">(~ 650 gm)</p>
                                 </div>
                                 <div class="text-right">
-                                    <span class="text-2xl font-bold text-gray-800 font-outfit">200 tk/loaf</span>
+                                    <span
+                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">200
+                                        tk/loaf</span>
                                 </div>
                             </div>
                         </div>
@@ -595,11 +670,14 @@
                             data-price="350">
                             <div class="flex justify-between items-center">
                                 <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit">Premium Brown Bread</h3>
+                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Premium Brown Bread
+                                    </h3>
                                     <p class="text-gray-600 font-outfit text-sm">(~ 650 gm)</p>
                                 </div>
                                 <div class="text-right">
-                                    <span class="text-2xl font-bold text-gray-800 font-outfit">350 tk/loaf</span>
+                                    <span
+                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">350
+                                        tk/loaf</span>
                                 </div>
                             </div>
                         </div>
@@ -608,11 +686,14 @@
                             data-price="300">
                             <div class="flex justify-between items-center">
                                 <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit">Regular Brown Bread</h3>
+                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Regular Brown Bread
+                                    </h3>
                                     <p class="text-gray-600 font-outfit text-sm">(~ 650 gm)</p>
                                 </div>
                                 <div class="text-right">
-                                    <span class="text-2xl font-bold text-gray-800 font-outfit">300 tk/loaf</span>
+                                    <span
+                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">300
+                                        tk/loaf</span>
                                 </div>
                             </div>
                         </div>
@@ -621,12 +702,15 @@
                             data-price="450">
                             <div class="flex justify-between items-center">
                                 <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit">Premium Multigrain Bread
+                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Premium Multigrain
+                                        Bread
                                     </h3>
                                     <p class="text-gray-600 font-outfit text-sm">(~ 650 gm)</p>
                                 </div>
                                 <div class="text-right">
-                                    <span class="text-2xl font-bold text-gray-800 font-outfit">450 tk/loaf</span>
+                                    <span
+                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">450
+                                        tk/loaf</span>
                                 </div>
                             </div>
                         </div>
@@ -635,12 +719,15 @@
                             data-price="400">
                             <div class="flex justify-between items-center">
                                 <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit">Regular Multigrain Bread
+                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Regular Multigrain
+                                        Bread
                                     </h3>
                                     <p class="text-gray-600 font-outfit text-sm">(~ 650 gm)</p>
                                 </div>
                                 <div class="text-right">
-                                    <span class="text-2xl font-bold text-gray-800 font-outfit">400 tk/loaf</span>
+                                    <span
+                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">400
+                                        tk/loaf</span>
                                 </div>
                             </div>
                         </div>
@@ -648,11 +735,13 @@
                         <div class="menu-item bg-white p-6 rounded-2xl shadow-md" data-name="kholbus" data-price="40">
                             <div class="flex justify-between items-center">
                                 <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit">Kholbus</h3>
+                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Kholbus</h3>
                                     <p class="text-gray-600 font-outfit text-sm">(~ 100 gm) (minimum 6 pieces)</p>
                                 </div>
                                 <div class="text-right">
-                                    <span class="text-2xl font-bold text-gray-800 font-outfit">40 tk/pc.</span>
+                                    <span
+                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">40
+                                        tk/pc.</span>
                                 </div>
                             </div>
                         </div>
@@ -667,10 +756,13 @@
                             </div>
                             <div class="flex justify-between items-center">
                                 <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit">Regular Ciabatta Bread</h3>
+                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Regular Ciabatta Bread
+                                    </h3>
                                 </div>
                                 <div class="text-right">
-                                    <span class="text-2xl font-bold text-gray-800 font-outfit">80 tk/loaf</span>
+                                    <span
+                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">80
+                                        tk/loaf</span>
                                 </div>
                             </div>
                         </div>
@@ -679,10 +771,13 @@
                             data-price="100">
                             <div class="flex justify-between items-center">
                                 <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit">Premium Ciabatta Bread</h3>
+                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Premium Ciabatta Bread
+                                    </h3>
                                 </div>
                                 <div class="text-right">
-                                    <span class="text-2xl font-bold text-gray-800 font-outfit">100 tk/loaf</span>
+                                    <span
+                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">100
+                                        tk/loaf</span>
                                 </div>
                             </div>
                         </div>
@@ -691,13 +786,16 @@
                             data-price="1200">
                             <div class="flex justify-between items-center">
                                 <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit">Arabian Khalid Al Nahal*
+                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Arabian Khalid Al
+                                        Nahal*
                                     </h3>
                                     <p class="text-gray-600 font-outfit text-sm">(9 inch) *Available only on weekends
                                     </p>
                                 </div>
                                 <div class="text-right">
-                                    <span class="text-2xl font-bold text-gray-800 font-outfit">1200 tk/loaf</span>
+                                    <span
+                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">1200
+                                        tk/loaf</span>
                                 </div>
                             </div>
                         </div>
@@ -727,10 +825,12 @@
                             </div>
                             <div class="flex justify-between items-center">
                                 <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit">Regular Ragi Bread</h3>
+                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Regular Ragi Bread</h3>
                                 </div>
                                 <div class="text-right">
-                                    <span class="text-lg font-semibold text-orange-600 font-outfit">Coming soon!</span>
+                                    <span
+                                        class="text-lg font-semibold text-orange-600 font-outfit whitespace-nowrap">Coming
+                                        soon!</span>
                                 </div>
                             </div>
                         </div>
@@ -745,10 +845,12 @@
                             </div>
                             <div class="flex justify-between items-center">
                                 <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit">Premium Ragi Bread</h3>
+                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Premium Ragi Bread</h3>
                                 </div>
                                 <div class="text-right">
-                                    <span class="text-lg font-semibold text-orange-600 font-outfit">Coming soon!</span>
+                                    <span
+                                        class="text-lg font-semibold text-orange-600 font-outfit whitespace-nowrap">Coming
+                                        soon!</span>
                                 </div>
                             </div>
                         </div>
@@ -780,11 +882,13 @@
                             data-price="290">
                             <div class="flex justify-between items-center">
                                 <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit">Cheese Kunafa</h3>
+                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Cheese Kunafa</h3>
                                     <p class="text-gray-600 font-outfit text-sm">(minimum 2 pieces)</p>
                                 </div>
                                 <div class="text-right">
-                                    <span class="text-2xl font-bold text-gray-800 font-outfit">290 tk/pc.</span>
+                                    <span
+                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">290
+                                        tk/pc.</span>
                                 </div>
                             </div>
                         </div>
@@ -793,10 +897,12 @@
                             data-price="115">
                             <div class="flex justify-between items-center">
                                 <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit">Chocolate Brownie</h3>
+                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Chocolate Brownie</h3>
                                 </div>
                                 <div class="text-right">
-                                    <span class="text-2xl font-bold text-gray-800 font-outfit">115 tk/pc.</span>
+                                    <span
+                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">115
+                                        tk/pc.</span>
                                 </div>
                             </div>
                         </div>
@@ -805,11 +911,13 @@
                             data-name="chocolate peanut crunch brownie" data-price="130">
                             <div class="flex justify-between items-center">
                                 <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit">Chocolate Peanut Crunch
+                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Chocolate Peanut Crunch
                                         Brownie</h3>
                                 </div>
                                 <div class="text-right">
-                                    <span class="text-2xl font-bold text-gray-800 font-outfit">130 tk/pc.</span>
+                                    <span
+                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">130
+                                        tk/pc.</span>
                                 </div>
                             </div>
                         </div>
@@ -818,11 +926,13 @@
                             data-price="180">
                             <div class="flex justify-between items-center">
                                 <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit">Oatmeal Brownie</h3>
+                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Oatmeal Brownie</h3>
                                     <p class="text-gray-600 font-outfit text-sm">(minimum 16 pieces)</p>
                                 </div>
                                 <div class="text-right">
-                                    <span class="text-2xl font-bold text-gray-800 font-outfit">180 tk/pc.</span>
+                                    <span
+                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">180
+                                        tk/pc.</span>
                                 </div>
                             </div>
                         </div>
@@ -831,11 +941,14 @@
                             data-price="75">
                             <div class="flex justify-between items-center">
                                 <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit">Chocolate Chips Cookie</h3>
+                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Chocolate Chips Cookie
+                                    </h3>
                                     <p class="text-gray-600 font-outfit text-sm">(~ 50 gm) (minimum 10 pieces)</p>
                                 </div>
                                 <div class="text-right">
-                                    <span class="text-2xl font-bold text-gray-800 font-outfit">75 tk/pc.</span>
+                                    <span
+                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">75
+                                        tk/pc.</span>
                                 </div>
                             </div>
                         </div>
@@ -844,11 +957,13 @@
                             data-price="65">
                             <div class="flex justify-between items-center">
                                 <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit">Oatmeal Cookie</h3>
+                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Oatmeal Cookie</h3>
                                     <p class="text-gray-600 font-outfit text-sm">(~ 25 gm) (minimum 10 pieces)</p>
                                 </div>
                                 <div class="text-right">
-                                    <span class="text-2xl font-bold text-gray-800 font-outfit">65 tk/pc.</span>
+                                    <span
+                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">65
+                                        tk/pc.</span>
                                 </div>
                             </div>
                         </div>
@@ -863,11 +978,14 @@
                             </div>
                             <div class="flex justify-between items-center">
                                 <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit">Pumpkin Spice Muffin</h3>
+                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Pumpkin Spice Muffin
+                                    </h3>
                                     <p class="text-gray-600 font-outfit text-sm">(minimum 4 pieces)</p>
                                 </div>
                                 <div class="text-right">
-                                    <span class="text-2xl font-bold text-gray-800 font-outfit">65 tk/pc.</span>
+                                    <span
+                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">65
+                                        tk/pc.</span>
                                 </div>
                             </div>
                         </div>
@@ -882,11 +1000,14 @@
                             </div>
                             <div class="flex justify-between items-center">
                                 <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit">Carrot Cheese Muffin</h3>
+                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Carrot Cheese Muffin
+                                    </h3>
                                     <p class="text-gray-600 font-outfit text-sm">(minimum 4 pieces)</p>
                                 </div>
                                 <div class="text-right">
-                                    <span class="text-2xl font-bold text-gray-800 font-outfit">65 tk/pc.</span>
+                                    <span
+                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">65
+                                        tk/pc.</span>
                                 </div>
                             </div>
                         </div>
@@ -900,8 +1021,6 @@
                 <p class="text-gray-600 font-outfit">Try adjusting your search or filter criteria</p>
             </div>
         </div>
-
-
     </section>
 
 

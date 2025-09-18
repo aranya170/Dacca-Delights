@@ -12,43 +12,43 @@
         href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Dancing+Script:wght@400;500;600;700&family=Pacifico&family=Great+Vibes&family=Kaushan+Script&display=swap"
         rel="stylesheet">
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        banana: '#F7DC6F',
-                        'banana-dark': '#F4D03F',
-                        'cream': '#FAF0E6',
-                        'gold': '#D4AF37',
-                        'warm-brown': '#8B4513'
-                    },
-                    fontFamily: {
-                        'outfit': ['Outfit', 'sans-serif'],
-                        'script': ['Dancing Script', 'cursive'],
-                        'fancy': ['Great Vibes', 'cursive'],
-                        'bakery': ['Kaushan Script', 'cursive']
-                    }
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    banana: '#F7DC6F',
+                    'banana-dark': '#F4D03F',
+                    'cream': '#FAF0E6',
+                    'gold': '#D4AF37',
+                    'warm-brown': '#8B4513'
+                },
+                fontFamily: {
+                    'outfit': ['Outfit', 'sans-serif'],
+                    'script': ['Dancing Script', 'cursive'],
+                    'fancy': ['Great Vibes', 'cursive'],
+                    'bakery': ['Kaushan Script', 'cursive']
                 }
             }
         }
+    }
     </script>
     <style>
-        .unified-bg {
-            background: linear-gradient(135deg, #FAF0E6 0%, #FDF2E9 100%);
-        }
+    .unified-bg {
+        background: linear-gradient(135deg, #FAF0E6 0%, #FDF2E9 100%);
+    }
 
-        .btn-hover {
-            transition: all 0.3s ease;
-        }
+    .btn-hover {
+        transition: all 0.3s ease;
+    }
 
-        .btn-hover:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        }
+    .btn-hover:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
 
-        .card-shadow {
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-        }
+    .card-shadow {
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
     </style>
 </head>
 
@@ -119,31 +119,49 @@
                     </h2>
                     <div class="space-y-4 mb-8">
                         <div class="flex items-center space-x-3">
-                            <i class="fas fa-map-marker-alt text-banana text-xl"></i>
+                            <i class="fas fa-map-marker-alt text-brown text-xl"></i>
                             <p class="text-gray-700 font-outfit text-lg">
-                                123 Bakery Lane, Dhaka, Bangladesh
+                                North Kafrul, Dhaka Cantonment, Dhaka
                             </p>
                         </div>
                         <div class="flex items-center space-x-3">
-                            <i class="fas fa-phone text-banana text-xl"></i>
+                            <i class="fas fa-phone text-brown text-xl"></i>
                             <p class="text-gray-700 font-outfit text-lg">
-                                +880 123 456 7890
+                                +8801622-823269
                             </p>
                         </div>
                         <div class="flex items-center space-x-3">
-                            <i class="fas fa-envelope text-banana text-xl"></i>
+                            <i class="fab fa-facebook text-brown text-xl"></i>
                             <p class="text-gray-700 font-outfit text-lg">
-                                contact@daccadelights.com
+                                Dacca Delights
+                            </p>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fab fa-instagram text-brown text-xl"></i>
+                            <p class="text-gray-700 font-outfit text-lg">
+                                Dacca Delights
+                            </p>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fab fa-whatsapp text-brown text-xl"></i>
+                            <p class="text-gray-700 font-outfit text-lg">
+                                +8801622-823269
+                            </p>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-envelope text-brown text-xl"></i>
+                            <p class="text-gray-700 font-outfit text-lg">
+                                info@daccadelights.com
                             </p>
                         </div>
                     </div>
-                    <h3 class="text-2xl font-black text-warm-brown font-outfit mb-4">Find Us</h3>
-                    <div class="w-full rounded-2xl">
+                    <!-- <h3 class="text-2xl font-black text-warm-brown font-outfit mb-4">Find Us</h3> -->
+                    <!-- <div class="w-full rounded-2xl">
                         <iframe class="rounded-2xl"
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5162.9589884591!2d90.38182009302218!3d23.791441345906193!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c79556047f3d%3A0x6df692c0fad7aba1!2sDacca%20Delights!5e0!3m2!1sen!2sbd!4v1757859877634!5m2!1sen!2sbd"
                             width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -154,37 +172,38 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="script.js"></script>
     <script>
-        $(function () {
-            var form = $('#contact-form');
-            var formMessages = $('#form-messages');
-            $(form).submit(function (event) {
-                event.preventDefault();
-                var formData = $(form).serialize();
-                $.ajax({
+    $(function() {
+        var form = $('#contact-form');
+        var formMessages = $('#form-messages');
+        $(form).submit(function(event) {
+            event.preventDefault();
+            var formData = $(form).serialize();
+            $.ajax({
                     type: 'POST',
                     url: $(form).attr('action'),
                     data: formData
                 })
-                    .done(function (response) {
-                        $(formMessages).removeClass('error');
-                        $(formMessages).addClass('success');
-                        $(formMessages).text(response);
-                        $('#name').val('');
-                        $('#email').val('');
-                        $('#phone').val('');
-                        $('#message').val('');
-                    })
-                    .fail(function (data) {
-                        $(formMessages).removeClass('success');
-                        $(formMessages).addClass('error');
-                        if (data.responseText !== '') {
-                            $(formMessages).text(data.responseText);
-                        } else {
-                            $(formMessages).text('Oops! An error occurred and your message could not be sent.');
-                        }
-                    });
-            });
+                .done(function(response) {
+                    $(formMessages).removeClass('error');
+                    $(formMessages).addClass('success');
+                    $(formMessages).text(response);
+                    $('#name').val('');
+                    $('#email').val('');
+                    $('#phone').val('');
+                    $('#message').val('');
+                })
+                .fail(function(data) {
+                    $(formMessages).removeClass('success');
+                    $(formMessages).addClass('error');
+                    if (data.responseText !== '') {
+                        $(formMessages).text(data.responseText);
+                    } else {
+                        $(formMessages).text(
+                            'Oops! An error occurred and your message could not be sent.');
+                    }
+                });
         });
+    });
     </script>
 </body>
 

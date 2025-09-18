@@ -1,7 +1,7 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = strip_tags(trim($_POST["name"]));
-    $email = filter_var(trim($_POST["email"])), FILTER_SANITIZE_EMAIL);
+    $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
     $phone = strip_tags(trim($_POST["phone"]));
     $message = strip_tags(trim($_POST["message"]));
 
@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Thank You! Your message has been sent.";
     } else {
         http_response_code(500);
-        echo "Oops! Something went wrong and we couldn't send your message.";
+        echo "Oops! Something went wrong and we couldn\'t send your message.";
     }
 
 } else {

@@ -11,64 +11,94 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Dancing+Script:wght@400;500;600;700&family=Pacifico&family=Great+Vibes&family=Kaushan+Script&display=swap"
         rel="stylesheet">
-        <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    screens: {
-                        'sm': {
-                            'max': '480px'
-                        },
+    <script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                screens: {
+                    'sm': {
+                        'max': '480px'
                     },
-                    colors: {
-                        banana: '#F7DC6F',
-                        'banana-dark': '#F4D03F',
-                        'cream': '#FAF0E6',
-                        'gold': '#D4AF37',
-                        'warm-brown': '#8B4513',
-                    },
-                    fontFamily: {
-                        'outfit': ['Outfit', 'sans-serif'],
-                        'script': ['Dancing Script', 'cursive'],
-                        'fancy': ['Great Vibes', 'cursive'],
-                        'bakery': ['Kaushan Script', 'cursive']
-                    }
+                },
+                colors: {
+                    banana: '#F7DC6F',
+                    'banana-dark': '#F4D03F',
+                    'cream': '#FAF0E6',
+                    'gold': '#D4AF37',
+                    'warm-brown': '#8B4513',
+                },
+                fontFamily: {
+                    'outfit': ['Outfit', 'sans-serif'],
+                    'script': ['Dancing Script', 'cursive'],
+                    'fancy': ['Great Vibes', 'cursive'],
+                    'bakery': ['Kaushan Script', 'cursive']
                 }
             }
         }
+    }
     </script>
     <style>
-        .unified-bg {
-            background: linear-gradient(135deg, #FAF0E6 0%, #FDF2E9 100%);
+    .unified-bg {
+        background: linear-gradient(135deg, #FAF0E6 0%, #FDF2E9 100%);
+    }
+
+    .btn-hover {
+        transition: all 0.3s ease;
+    }
+
+    .btn-hover:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .gold-text {
+        background: linear-gradient(45deg, #D4AF37, #FFD700, #B8860B);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-shadow {
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
+
+    @media (max-width: 767px) {
+        .text-xl {
+            font-size: 1.125rem;
+            /* equivalent to text-lg */
+            line-height: 1.75rem;
         }
 
-        .btn-hover {
-            transition: all 0.3s ease;
+        .text-2xl {
+            font-size: 1.25rem;
+            /* equivalent to text-xl */
+            line-height: 1.75rem;
         }
+    }
 
-        .btn-hover:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        }
+    .product-card {
+        transition: all 0.3s ease;
+    }
 
-        .gold-text {
-            background: linear-gradient(45deg, #D4AF37, #FFD700, #B8860B);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-        }
+    .product-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
 
-        .card-shadow {
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-        }
+    .category-tag {
+        transition: all 0.3s ease;
+    }
+
+    .category-tag:hover {
+        transform: scale(1.05);
+    }
     </style>
 </head>
 
 <body class="bg-white">
-    <!-- Unified Navigation + Hero Background -->
     <?php include 'navbar.php'; ?>
-    <div class="unified-bg min-h-screen">
+    <div class="unified-bg py-10">
 
         <!-- Hero Content Card -->
         <section class="pb-20 px-6">
@@ -90,9 +120,9 @@
                             <div class="mb-8">
                                 <h3
                                     class="text-4xl sm:text-3xl lg:text-5xl font-black text-gray-800 font-outfit leading-tight mb-4">
-                                    PREMIUM BAKERY
+                                    Premium Bakery
                                     <br>
-                                    FRESH DAILY
+                                    Fresh Daily
                                 </h3>
                             </div>
 
@@ -107,16 +137,13 @@
 
                             <!-- Buttons -->
                             <div class="flex flex-col sm:flex-row gap-4">
-                            <a href="https://wa.me/8801622823269?text=I%20would%20like%20to%20place%20an%20order" target="_blank">    
-                            <button
-                                    class="bg-banana text-warm-brown font-bold py-4 sm:py-3 px-8 sm:px-6 rounded-full btn-hover text-lg sm:text-base font-outfit">
-                                    Order Now!
-                                </button>
+                                <a href="https://wa.me/8801622823269?text=I%20would%20like%20to%20place%20an%20order"
+                                    target="_blank">
+                                    <button
+                                        class="bg-banana text-warm-brown font-bold py-4 sm:py-3 px-8 sm:px-6 rounded-full btn-hover text-lg sm:text-base font-outfit">
+                                        Order Now!
+                                    </button>
                                 </a>
-                                <button
-                                    class="text-gray-800 font-semibold py-4 sm:py-3 px-8 sm:px-6 rounded-full border-2 border-gray-300 hover:border-gray-400 btn-hover flex items-center justify-center sm:justify-start font-outfit">
-                                    Explore <i class="fas fa-arrow-right ml-2"></i>
-                                </button>
                             </div>
                         </div>
 
@@ -163,36 +190,40 @@
                         <div>
                             <!-- Main Heading -->
                             <div class="mb-8">
-                                <h3 class="text-4xl sm:text-3xl lg:text-5xl font-black text-warm-brown font-outfit leading-tight">
+                                <h3
+                                    class="text-4xl sm:text-3xl lg:text-5xl font-black text-warm-brown font-outfit leading-tight">
                                     Give it a Try!
                                 </h3>
                             </div>
 
                             <!-- Featured Items Section -->
                             <div class="mb-8">
-                                <h4 class="text-2xl sm:text-xl font-bold text-gray-800 font-outfit mb-2">Featured Items</h4>
+                                <h4 class="text-2xl sm:text-xl font-bold text-gray-800 font-outfit mb-2">Featured Items
+                                </h4>
 
                                 <!-- Product Card -->
-                                <div class="bg-gray-50 rounded-2xl p-6 sm:p-4 mb-2">
+                                <div class="bg-gray-50 rounded-2xl p-6 sm:p-4 mb-2 product-card">
                                     <div class="flex items-center gap-4">
                                         <!-- Product Image -->
                                         <div class="flex-shrink-0">
-                                            <img src="assets/Items/WhatsApp Image 2025-09-11 at 4.32.55 AM (1).jpeg"
-                                                alt="Bagel Buns" class="w-20 sm:w-16 h-20 sm:h-16 rounded-xl object-cover">
+                                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvalTIX_iXWu-MqbHYJc3t2OG3tEpp60FN3Q&s"
+                                                alt="Bagel Buns"
+                                                class="w-20 sm:w-16 h-20 sm:h-16 rounded-xl object-cover">
                                         </div>
 
                                         <!-- Product Info -->
                                         <div class="flex-grow">
                                             <div class="flex items-start justify-between items-center mb-2">
                                                 <div>
-                                                    <h5 class="text-xl sm:text-lg font-bold text-gray-800 font-outfit">Bagel Buns
+                                                    <h5 class="text-xl sm:text-lg font-bold text-gray-800 font-outfit">
+                                                        Regular Ciabatta
                                                     </h5>
-                                                    <p class="text-gray-600 sm:text-sm font-outfit">Gluten Free</p>
+                                                    <p class="text-gray-600 sm:text-sm font-outfit">Minimum 4pc</p>
                                                 </div>
                                                 <div class="text-right justify-between">
                                                     <span
-                                                        class="text-2xl sm:text-xl font-bold text-gray-800 font-outfit justify-between">BDT
-                                                        400</span>
+                                                        class="text-2xl sm:text-xl font-bold text-gray-800 font-outfit justify-between">80
+                                                        tk/pc</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -201,14 +232,17 @@
 
                                 <!-- Product Description -->
                                 <p class="text-gray-600 font-outfit mb-6 leading-relaxed">
-                                    Lorem Ipsum Dolor Sit Amet Consectetur.
+                                    Perfectly airy, delicately flaky, and irresistibly fresh.
                                 </p>
 
                                 <!-- Order Button -->
-                                <button
-                                    class="bg-banana hover:bg-banana-dark text-warm-brown font-bold py-4 sm:py-3 px-8 sm:px-6 rounded-full btn-hover text-lg sm:text-base font-outfit">
-                                    Order Online
-                                </button>
+                                <a href="https://wa.me/8801622823269?text=I%20would%20like%20to%20place%20an%20order"
+                                    target="_blank">
+                                    <button
+                                        class="bg-banana text-warm-brown font-bold py-4 sm:py-3 px-8 sm:px-6 rounded-full btn-hover text-lg sm:text-base font-outfit">
+                                        Order Now!
+                                    </button>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -221,69 +255,84 @@
                         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-12">
                             <!-- Left: Heading -->
                             <div>
-                                <h2 class="text-5xl sm:text-4xl lg:text-6xl font-black text-warm-brown font-outfit leading-tight">
-                                    Products We Bake daily -
+                                <h2
+                                    class="text-5xl sm:text-4xl lg:text-6xl font-black text-warm-brown font-outfit leading-tight">
+                                    Products we bake daily -
                                 </h2>
                             </div>
 
                             <!-- Right: Category Tags -->
-<div>
-    <div class="space-y-4">
-        <!-- Row 1 -->
-        <div class="flex flex-wrap gap-3">
-            <a href="menu.php?category=tarts" class="bg-gray-300 text-gray-800 px-4 sm:px-3 py-2 sm:py-1 rounded-full font-outfit font-medium text-sm sm:text-xs hover:bg-banana hover:text-gray-800 transition-colors">
-                Tarts <span class="ml-2 bg-gray-600 text-white px-2 py-1 rounded-full text-xs">6</span>
-            </a>
-            <a href="menu.php?category=bagels" class="bg-teal-400 text-white px-4 sm:px-3 py-2 sm:py-1 rounded-full font-outfit font-medium text-sm sm:text-xs hover:bg-banana hover:text-gray-800 transition-colors">
-                Bagels <span class="ml-2 bg-teal-600 text-white px-2 py-1 rounded-full text-xs">10</span>
-            </a>
-            <a href="menu.php?category=desserts" class="bg-purple-400 text-white px-4 sm:px-3 py-2 sm:py-1 rounded-full font-outfit font-medium text-sm sm:text-xs hover:bg-banana hover:text-gray-800 transition-colors">
-                Desserts <span class="ml-2 bg-purple-600 text-white px-2 py-1 rounded-full text-xs">8</span>
-            </a>
-        </div>
-        <!-- Row 2 -->
-        <div class="flex flex-wrap gap-3">
-            <a href="menu.php?category=breads" class="bg-gray-500 text-white px-4 sm:px-3 py-2 sm:py-1 rounded-full font-outfit font-medium text-sm sm:text-xs hover:bg-banana hover:text-gray-800 transition-colors">
-                Breads <span class="ml-2 bg-gray-700 text-white px-2 py-1 rounded-full text-xs">14</span>
-            </a>
-            <a href="menu.php?category=buns" class="bg-banana text-gray-800 px-4 sm:px-3 py-2 sm:py-1 rounded-full font-outfit font-medium text-sm sm:text-xs hover:bg-yellow-600 hover:text-white transition-colors">
-                Buns & Rolls <span class="ml-2 bg-yellow-600 text-white px-2 py-1 rounded-full text-xs">6</span>
-            </a>
-            <a href="menu.php?category=gluten-free" class="bg-orange-400 text-white px-4 sm:px-3 py-2 sm:py-1 rounded-full font-outfit font-medium text-sm sm:text-xs hover:bg-banana hover:text-gray-800 transition-colors">
-                Gluten Free <span class="ml-2 bg-orange-600 text-white px-2 py-1 rounded-full text-xs">2</span>
-            </a>
-        </div>
-    </div>
-</div>
+                            <div>
+                                <div class="space-y-4">
+                                    <!-- Row 1 -->
+                                    <div class="flex flex-wrap gap-3">
+                                        <a href="menu.php?category=tarts"
+                                            class="bg-gray-300 text-gray-800 px-4 sm:px-3 py-2 sm:py-1 rounded-full font-outfit font-medium text-sm sm:text-xs hover:bg-banana hover:text-gray-800 transition-colors category-tag">
+                                            Tarts <span
+                                                class="ml-2 bg-gray-600 text-white px-2 py-1 sm:px-1 sm:py-0.5 rounded-full text-xs sm:text-[10px]">6</span>
+                                        </a>
+                                        <a href="menu.php?category=bagels"
+                                            class="bg-teal-400 text-white px-4 sm:px-3 py-2 sm:py-1 rounded-full font-outfit font-medium text-sm sm:text-xs hover:bg-banana hover:text-gray-800 transition-colors category-tag">
+                                            Bagels <span
+                                                class="ml-2 bg-teal-600 text-white px-2 py-1 sm:px-1 sm:py-0.5 rounded-full text-xs sm:text-[10px]">10</span>
+                                        </a>
+                                        <a href="menu.php?category=desserts"
+                                            class="bg-purple-400 text-white px-4 sm:px-3 py-2 sm:py-1 rounded-full font-outfit font-medium text-sm sm:text-xs hover:bg-banana hover:text-gray-800 transition-colors category-tag">
+                                            Desserts <span
+                                                class="ml-2 bg-purple-600 text-white px-2 py-1 sm:px-1 sm:py-0.5 rounded-full text-xs sm:text-[10px]">8</span>
+                                        </a>
+                                    </div>
+                                    <!-- Row 2 -->
+                                    <div class="flex flex-wrap gap-3">
+                                        <a href="menu.php?category=breads"
+                                            class="bg-gray-500 text-white px-4 sm:px-3 py-2 sm:py-1 rounded-full font-outfit font-medium text-sm sm:text-xs hover:bg-banana hover:text-gray-800 transition-colors category-tag">
+                                            Breads <span
+                                                class="ml-2 bg-gray-700 text-white px-2 py-1 sm:px-1 sm:py-0.5 rounded-full text-xs sm:text-[10px]">14</span>
+                                        </a>
+                                        <a href="menu.php?category=buns"
+                                            class="bg-banana text-gray-800 px-4 sm:px-3 py-2 sm:py-1 rounded-full font-outfit font-medium text-sm sm:text-xs hover:bg-yellow-600 hover:text-white transition-colors category-tag">
+                                            Buns & Rolls <span
+                                                class="ml-2 bg-yellow-600 text-white px-2 py-1 sm:px-1 sm:py-0.5 rounded-full text-xs sm:text-[10px]">6</span>
+                                        </a>
+                                        <a href="menu.php?category=gluten-free"
+                                            class="bg-orange-400 text-white px-4 sm:px-3 py-2 sm:py-1 rounded-full font-outfit font-medium text-sm sm:text-xs hover:bg-banana hover:text-gray-800 transition-colors category-tag">
+                                            Gluten Free <span
+                                                class="ml-2 bg-orange-600 text-white px-2 py-1 sm:px-1 sm:py-0.5 rounded-full text-xs sm:text-[10px]">2</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
                         <!-- Bottom Section: Product Images -->
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                             <!-- Product 1: Bagel With Seeds -->
-                            <div class="text-center">
+                            <div class="text-center product-card" style="pointer-events: none;">
                                 <div class="rounded-2xl overflow-hidden shadow-lg mb-4">
                                     <img src="assets/Items/Bagels.jpeg" alt="Bagel With Seeds"
                                         class="w-full h-48 object-cover">
                                 </div>
-                                <h3 class="text-xl sm:text-lg font-bold text-gray-800 font-outfit">Bagel With Seeds</h3>
+                                <h3 class="text-xl sm:text-lg font-bold text-gray-800 font-outfit">Chewy Bagels</h3>
                             </div>
 
                             <!-- Product 2: Sliced Piece Bread -->
-                            <div class="text-center">
+                            <div class="text-center product-card" style="pointer-events: none;">
                                 <div class="rounded-2xl overflow-hidden shadow-lg mb-4">
                                     <img src="assets/Items/Bread.jpeg" alt="Sliced Piece Bread"
                                         class="w-full h-48 object-cover">
                                 </div>
-                                <h3 class="text-xl sm:text-lg font-bold text-gray-800 font-outfit">Sliced Piece Bread</h3>
+                                <h3 class="text-xl sm:text-lg font-bold text-gray-800 font-outfit">Fresh Breads
+                                </h3>
                             </div>
 
                             <!-- Product 3: Cookies Glucose -->
-                            <div class="text-center">
+                            <div class="text-center product-card" style="pointer-events: none;">
                                 <div class="rounded-2xl overflow-hidden shadow-lg mb-4">
                                     <img src="assets/Items/Arabian Bread.jpeg" alt="Cookies Glucose"
                                         class="w-full h-48 object-cover">
                                 </div>
-                                <h3 class="text-xl sm:text-lg font-bold text-gray-800 font-outfit">Arabian Bread</h3>
+                                <h3 class="text-xl sm:text-lg font-bold text-gray-800 font-outfit">Delightful Desert
+                                </h3>
                             </div>
                         </div>
                     </div>
@@ -319,7 +368,7 @@
                                 <!-- Left Image -->
                                 <div class="relative">
                                     <div class="rounded-2xl overflow-hidden shadow-xl">
-                                        <img src="https://img.freepik.com/free-photo/preparation-baking-kitchen-ingredients-cooking_114579-487.jpg?semt=ais_incoming&w=740&q=80"
+                                        <img src="assets\Items\MadeWithLoaf.jpg"
                                             alt="Baking Process - Hands preparing dough"
                                             class="w-full h-80 lg:h-96 object-cover">
                                     </div>
@@ -328,23 +377,26 @@
                                 <!-- Right Content -->
                                 <div class="text-white">
                                     <!-- Main Heading -->
-                                    <h2 class="text-4xl sm:text-3xl lg:text-5xl font-black font-outfit leading-tight mb-6">
-                                        What makes us different?
+                                    <h2
+                                        class="text-4xl sm:text-3xl lg:text-5xl font-black font-outfit leading-tight mb-6">
+                                        #MadeWithLoaf
                                     </h2>
 
                                     <!-- Description -->
                                     <p class="text-gray-300 text-lg sm:text-base font-outfit leading-relaxed mb-8">
-                                        Lorem Ipsum Dolor Sit Amet Consectetur. Ultrices Vulputate Vitae
-                                        Sociis Iaculis Nec. Libero Nulla A Tincidunt Id Dolor Tempus Risus
-                                        Lorem Tristique. Venenatis Aenean Platea Gravida Varius Lorem
-                                        Rhoncus Augue Elit Lorem.
+                                        Get our breads and bakery products made with love and the finest ingredients.
+                                        Customize it all you want! Capture it, share it with us, and get featured on our
+                                        page.
                                     </p>
 
                                     <!-- Learn Baking Button -->
-                                    <button
-                                        class="bg-banana hover:bg-banana-dark text-gray-800 font-bold py-4 sm:py-3 px-8 sm:px-6 rounded-full btn-hover text-lg sm:text-base font-outfit transition-all">
-                                        Learn about us
-                                    </button>
+                                    <a href="https://wa.me/8801622823269?text=I%20would%20like%20to%20place%20an%20order"
+                                        target="_blank">
+                                        <button
+                                            class="bg-banana text-warm-brown font-bold py-4 sm:py-3 px-8 sm:px-6 rounded-full btn-hover text-lg sm:text-base font-outfit">
+                                            Share Your Creation!
+                                        </button>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -362,10 +414,9 @@
                                 <!-- Left Content -->
                                 <div class="text-teal-800">
                                     <!-- Main Heading -->
-                                    <h2 class="text-4xl sm:text-3xl lg:text-5xl font-black font-outfit leading-tight mb-8">
-                                        WITH ENOUGH<br>
-                                        BUTTER, ANYTHING<br>
-                                        IS GOOD!
+                                    <h2
+                                        class="text-4xl sm:text-3xl lg:text-5xl font-black font-outfit leading-tight mb-8">
+                                        Obsessed with Dacca Delights!
                                     </h2>
 
                                     <!-- Customer Review Section -->
@@ -373,19 +424,22 @@
                                         <!-- Customer Avatar -->
                                         <div class="flex-shrink-0">
                                             <div class="w-16 h-16 rounded-full overflow-hidden">
-                                                <img src="https://cdn1.iconfinder.com/data/icons/user-pictures/100/male3-512.png"
+                                                <img src="https://img.freepik.com/premium-vector/portrait-brunette-woman-avatar-female-person-vector-icon-adult-flat-style_605517-159.jpg?semt=ais_incoming&w=740&q=80"
                                                     alt="Customer" class="w-full h-full object-cover">
                                             </div>
                                         </div>
 
                                         <!-- Review Content -->
                                         <div>
-                                            <p class="text-gray-700 font-outfit text-lg sm:text-base leading-relaxed mb-2">
-                                                Lorem Ipsum Dolor Sit Amet<br>
-                                                Consectetur. Uus Augue Elit Lorem.
+                                            <p
+                                                class="text-gray-700 font-outfit text-lg sm:text-base leading-relaxed mb-2">
+                                                Sarah Chowdhury
                                             </p>
                                             <p class="text-gray-600 font-outfit text-sm sm:text-xs">
-                                                What We Are Dishing Out?
+                                                The bagels are chewy on the outside, soft inside, and perfect for
+                                                stacking with cold cuts. Their baguette is just as good! crispy crust,
+                                                fluffy middle. I`ve already ordered three times, and coming back for
+                                                more!
                                             </p>
                                         </div>
                                     </div>
@@ -396,8 +450,9 @@
                                     <!-- Rating Section -->
                                     <div class="mb-8">
                                         <!-- Large Rating Number -->
-                                        <div class="text-6xl sm:text-5xl lg:text-7xl font-black text-teal-800 font-outfit mb-2">
-                                            4.56
+                                        <div
+                                            class="text-6xl sm:text-5xl lg:text-7xl font-black text-teal-800 font-outfit mb-2">
+                                            5.00
                                         </div>
 
                                         <!-- Star Rating -->
@@ -425,39 +480,21 @@
                                         </div>
 
                                         <!-- Review Count -->
-                                        <p class="text-gray-700 font-outfit text-sm sm:text-xs">
+                                        <!-- <p class="text-gray-700 font-outfit text-sm sm:text-xs">
                                             Base On 56,000 Reviews
-                                        </p>
+                                        </p> -->
                                     </div>
 
                                     <!-- Product Tags -->
-                                    <div class="grid grid-cols-3 gap-3">
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
                                         <!-- Row 1 -->
                                         <button
-                                            class="bg-teal-600 bg-opacity-30 text-teal-800 px-4 sm:px-2 py-2 sm:py-1 rounded-full font-outfit font-medium text-sm sm:text-xs hover:bg-opacity-40 transition-all">
-                                            Plain Cake
+                                            class="w-full bg-teal-600 bg-opacity-30 text-teal-800 px-4 sm:px-2 py-2 sm:py-1 rounded-full font-outfit font-medium text-sm sm:text-xs hover:bg-opacity-40 transition-all">
+                                            Sourdough Bread
                                         </button>
                                         <button
-                                            class="bg-teal-600 bg-opacity-30 text-teal-800 px-4 sm:px-2 py-2 sm:py-1 rounded-full font-outfit font-medium text-sm sm:text-xs hover:bg-opacity-40 transition-all">
-                                            Croissant
-                                        </button>
-                                        <button
-                                            class="bg-teal-600 bg-opacity-30 text-teal-800 px-4 sm:px-2 py-2 sm:py-1 rounded-full font-outfit font-medium text-sm sm:text-xs hover:bg-opacity-40 transition-all">
-                                            Loaf Bread
-                                        </button>
-
-                                        <!-- Row 2 -->
-                                        <button
-                                            class="bg-teal-600 bg-opacity-30 text-teal-800 px-4 sm:px-2 py-2 sm:py-1 rounded-full font-outfit font-medium text-sm sm:text-xs hover:bg-opacity-40 transition-all">
-                                            Pancakes
-                                        </button>
-                                        <button
-                                            class="bg-teal-600 bg-opacity-30 text-teal-800 px-4 sm:px-2 py-2 sm:py-1 rounded-full font-outfit font-medium text-sm sm:text-xs hover:bg-opacity-40 transition-all">
-                                            Cookies
-                                        </button>
-                                        <button
-                                            class="bg-teal-600 bg-opacity-30 text-teal-800 px-4 sm:px-2 py-2 sm:py-1 rounded-full font-outfit font-medium text-sm sm:text-xs hover:bg-opacity-40 transition-all">
-                                            Apple Pie
+                                            class="w-full bg-teal-600 bg-opacity-30 text-teal-800 px-4 sm:px-2 py-2 sm:py-1 rounded-full font-outfit font-medium text-sm sm:text-xs hover:bg-opacity-40 transition-all">
+                                            Mango Cheese Tarts
                                         </button>
                                     </div>
                                 </div>
