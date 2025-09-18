@@ -396,7 +396,7 @@
                             <div class="flex justify-between items-center">
                                 <div>
                                     <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Bagel Bunch</h3>
-                                    <p class="text-gray-600 font-outfit text-sm">(A set of all 6 Bagels from above)</p>
+                                    <p class="text-gray-600 font-outfit text-sm">(A set of Plain, Cheese, White Sesame, Black Sesame, Chia and Mixed Seed Bagel)</p>
                                 </div>
                                 <div class="text-right">
                                     <span
@@ -732,10 +732,10 @@
                             </div>
                         </div>
 
-                        <div class="menu-item bg-white p-6 rounded-2xl shadow-md" data-name="kholbus" data-price="40">
+                        <div class="menu-item bg-white p-6 rounded-2xl shadow-md" data-name="khobus" data-price="40">
                             <div class="flex justify-between items-center">
                                 <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Kholbus</h3>
+                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Khobus</h3>
                                     <p class="text-gray-600 font-outfit text-sm">(~ 100 gm) (minimum 6 pieces)</p>
                                 </div>
                                 <div class="text-right">
