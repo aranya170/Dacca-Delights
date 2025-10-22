@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dacca Delights POS System</title>
+    <link rel="icon" type="image/jpeg" href="../assets/logo/481163664_10229431150832277_6672533633109793344_n.jpg">
+    <title>Dacca Delights</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -87,7 +88,7 @@
 <body class="bg-cream min-h-screen font-inter">
 
     <!-- Header -->
-    <header class="bg-white shadow-md border-b-4 border-gold no-print">
+    <header class="bg-white shadow-md no-print">
         <div class="container mx-auto px-4 py-4">
             <div class="flex justify-between items-center">
                 <div class="flex items-center space-x-4">
@@ -95,7 +96,7 @@
                         <img src="..\assets\logo\Logo_Dacca Delights-03.svg" alt="Dacca Delights Logo"
                             class="h-10 w-10 object-cover rounded-md shadow-sm">
                         <div>
-                            <h1 class="text-2xl font-bold text-warm-brown">Dacca Delights</h1>
+                            <!-- <h1 class="text-2xl font-bold text-warm-brown">Dacca Delights</h1> -->
                         </div>
                     </a>
                 </div>
