@@ -12,6 +12,11 @@
 
             <!-- Hamburger Menu for Mobile -->
             <div class="md:hidden flex items-center">
+                <button id="cart-toggle-mobile" class="relative text-gray-700 focus:outline-none mr-4">
+                    <i class="fas fa-shopping-cart text-2xl"></i>
+                    <span id="cart-count-mobile"
+                        class="absolute -top-2 -right-2 bg-banana text-warm-brown rounded-full w-5 h-5 text-xs flex items-center justify-center font-bold">0</span>
+                </button>
                 <button id="menu-toggle" class="text-gray-700 focus:outline-none relative w-8 h-8">
                     <span class="sr-only">Toggle menu</span>
                     <div class="hamburger-icon">
@@ -39,20 +44,51 @@
                     class="text-gray-700 hover:text-warm-brown font-outfit font-medium py-2 md:py-0 opacity-0 md:opacity-100 nav-item sm:text-sm">Contact</a>
             </div>
 
-            <!-- Right Side (Order Now Button - Desktop Only) -->
+            <!-- Cart Icon -->
             <div class="hidden md:flex items-center space-x-4">
-                <a href="https://wa.me/8801622823269?text=I%20would%20like%20to%20place%20an%20order" target="_blank">
-                    <button
-                        class="bg-banana hover:bg-banana-dark text-warm-brown font-outfit font-semibold py-3 sm:py-2 px-6 sm:px-4 rounded-full btn-hover transition-colors duration-300 sm:text-sm">
-                        Order Now!
-                    </button>
-                </a>
+                <button id="cart-toggle" class="relative text-gray-700 focus:outline-none">
+                    <i class="fas fa-shopping-cart text-2xl"></i>
+                    <span id="cart-count"
+                        class="absolute -top-2 -right-2 bg-banana text-warm-brown rounded-full w-5 h-5 text-xs flex items-center justify-center font-bold">0</span>
+                </button>
             </div>
+        </div>
+    </div>
+
+    <!-- Cart Drawer -->
+    <div id="cart-drawer"
+        class="fixed top-0 right-0 h-full w-full md:w-1/3 bg-white shadow-lg transform cart-hidden transition-transform duration-300 ease-in-out z-50">
+        <div class="flex justify-between items-center p-4 border-b">
+            <h2 class="text-2xl font-bold font-outfit text-gray-800">Your Cart</h2>
+            <button id="close-cart" class="text-gray-700 focus:outline-none">
+                <i class="fas fa-times text-2xl"></i>
+            </button>
+        </div>
+        <div id="cart-items" class="p-4 overflow-y-auto h-[calc(100%-150px)]">
+            <!-- Cart items will be dynamically inserted here -->
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 p-4 border-t bg-white">
+            <div class="flex justify-between items-center mb-4">
+                <span class="text-xl font-bold font-outfit text-gray-800">Total:</span>
+                <span id="cart-total" class="text-xl font-bold font-outfit text-gray-800">0 tk</span>
+            </div>
+            <a href="checkout.php">
+                <button
+                    class="w-full bg-banana hover:bg-banana-dark text-warm-brown font-outfit font-semibold py-3 rounded-full btn-hover transition-colors duration-300">
+                    Checkout
+                </button>
+            </a>
         </div>
     </div>
 
     <!-- CSS for Hamburger Animation -->
     <style>
+    .cart-hidden {
+        transform: translateX(100%);
+    }
+    .cart-visible {
+        transform: translateX(0);
+    }
     .hamburger-icon span:nth-child(1) {
         top: 0.5rem;
     }

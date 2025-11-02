@@ -1,3 +1,9 @@
+<?php
+include 'admin/config/database.php';
+$database = new Database();
+$db = $database->getConnection();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -105,37 +111,16 @@
                             data-category="all">
                             All Items
                         </button>
-                        <button
-                            class="filter-btn bg-gray-200 text-gray-700 px-4 py-2 rounded-full font-outfit font-semibold btn-hover text-sm"
-                            data-category="bagels">
-                            Bagels
-                        </button>
+                        <?php
+                        $query = "SELECT * FROM categories WHERE is_active = 1 ORDER BY sort_order";
+                        $stmt = $db->prepare($query);
+                        $stmt->execute();
 
-                        <button
-                            class="filter-btn bg-gray-200 text-gray-700 px-4 py-2 rounded-full font-outfit font-semibold btn-hover text-sm"
-                            data-category="breads">
-                            Breads
-                        </button>
-                        <button
-                            class="filter-btn bg-gray-200 text-gray-700 px-4 py-2 rounded-full font-outfit font-semibold btn-hover text-sm"
-                            data-category="buns">
-                            Buns & Rolls
-                        </button>
-                        <button
-                            class="filter-btn bg-gray-200 text-gray-700 px-4 py-2 rounded-full font-outfit font-semibold btn-hover text-sm"
-                            data-category="desserts">
-                            Desserts
-                        </button>
-                        <button
-                            class="filter-btn bg-gray-200 text-gray-700 px-4 py-2 rounded-full font-outfit font-semibold btn-hover text-sm"
-                            data-category="tarts">
-                            Tarts
-                        </button>
-                        <button
-                            class="filter-btn bg-gray-200 text-gray-700 px-4 py-2 rounded-full font-outfit font-semibold btn-hover text-sm"
-                            data-category="gluten-free">
-                            Gluten Free
-                        </button>
+                        while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+                            extract($row);
+                            echo "<button class=\"filter-btn bg-gray-200 text-gray-700 px-4 py-2 rounded-full font-outfit font-semibold btn-hover text-sm\" data-category=\"$id\">$name</button>";
+                        }
+                        ?>
                     </div>
                 </div>
             </div>
@@ -161,242 +146,23 @@
                     </div>
 
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div class="menu-item bg-white p-6 rounded-2xl shadow-md" data-name="sandwich bread"
-                            data-price="250">
-                            <div class="flex justify-between items-center">
-                                <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Sandwich Bread</h3>
-                                    <p class="text-gray-600 font-outfit text-sm">(~ 1000 gm)</p>
-                                </div>
-                                <div class="text-right">
-                                    <span
-                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">250
-                                        tk/loaf</span>
-                                </div>
-                            </div>
-                        </div>
+                        <?php
+                        $query = "SELECT * FROM menu_items WHERE category_id = 'breads' AND is_available = 1";
+                        $stmt = $db->prepare($query);
+                        $stmt->execute();
 
-                        <div class="menu-item bg-white p-6 rounded-2xl shadow-md" data-name="sourdough bread"
-                            data-price="350">
-                            <div class="flex justify-between items-center">
-                                <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Sourdough Bread</h3>
-                                    <p class="text-gray-600 font-outfit text-sm">(~ 650 gm)</p>
-                                </div>
-                                <div class="text-right">
-                                    <span
-                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">350
-                                        tk/loaf</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="menu-item bg-white p-6 rounded-2xl shadow-md"
-                            data-name="sourdough bread whole wheat" data-price="420">
-                            <div class="flex justify-between items-center">
-                                <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Sourdough Bread (Whole
-                                        Wheat)</h3>
-                                    <p class="text-gray-600 font-outfit text-sm">(~ 650 gm)</p>
-                                </div>
-                                <div class="text-right">
-                                    <span
-                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">420
-                                        tk/loaf</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="menu-item bg-white p-6 rounded-2xl shadow-md" data-name="baguette" data-price="300">
-                            <div class="flex justify-between items-center">
-                                <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Baguette</h3>
-                                    <p class="text-gray-600 font-outfit text-sm">(~ 400 gm)</p>
-                                </div>
-                                <div class="text-right">
-                                    <span
-                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">300
-                                        tk/loaf</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="menu-item bg-white p-6 rounded-2xl shadow-md relative" data-name="mini baguette"
-                            data-price="300">
-                            <div class="absolute -top-2 -left-2">
-                                <div
-                                    class="bg-banana text-warm-brown px-3 py-1 rounded-full text-sm font-bold transform -rotate-12">
-                                    New!
-                                </div>
-                            </div>
-                            <div class="flex justify-between items-center">
-                                <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Mini Baguette</h3>
-                                    <p class="text-gray-600 font-outfit text-sm">(~ 200 gm)</p>
-                                </div>
-                                <div class="text-right">
-                                    <span
-                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">300
-                                        tk/pair</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="menu-item bg-white p-6 rounded-2xl shadow-md" data-name="milk bread"
-                            data-price="200">
-                            <div class="flex justify-between items-center">
-                                <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Milk Bread</h3>
-                                    <p class="text-gray-600 font-outfit text-sm">(~ 650 gm)</p>
-                                </div>
-                                <div class="text-right">
-                                    <span
-                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">200
-                                        tk/loaf</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="menu-item bg-white p-6 rounded-2xl shadow-md" data-name="premium brown bread"
-                            data-price="350">
-                            <div class="flex justify-between items-center">
-                                <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Premium Brown Bread
-                                    </h3>
-                                    <p class="text-gray-600 font-outfit text-sm">(~ 650 gm)</p>
-                                </div>
-                                <div class="text-right">
-                                    <span
-                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">350
-                                        tk/loaf</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="menu-item bg-white p-6 rounded-2xl shadow-md" data-name="regular brown bread"
-                            data-price="300">
-                            <div class="flex justify-between items-center">
-                                <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Regular Brown Bread
-                                    </h3>
-                                    <p class="text-gray-600 font-outfit text-sm">(~ 650 gm)</p>
-                                </div>
-                                <div class="text-right">
-                                    <span
-                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">300
-                                        tk/loaf</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="menu-item bg-white p-6 rounded-2xl shadow-md" data-name="premium multigrain bread"
-                            data-price="450">
-                            <div class="flex justify-between items-center">
-                                <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Premium Multigrain
-                                        Bread
-                                    </h3>
-                                    <p class="text-gray-600 font-outfit text-sm">(~ 650 gm)</p>
-                                </div>
-                                <div class="text-right">
-                                    <span
-                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">450
-                                        tk/loaf</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="menu-item bg-white p-6 rounded-2xl shadow-md" data-name="regular multigrain bread"
-                            data-price="400">
-                            <div class="flex justify-between items-center">
-                                <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Regular Multigrain
-                                        Bread
-                                    </h3>
-                                    <p class="text-gray-600 font-outfit text-sm">(~ 650 gm)</p>
-                                </div>
-                                <div class="text-right">
-                                    <span
-                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">400
-                                        tk/loaf</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="menu-item bg-white p-6 rounded-2xl shadow-md" data-name="khobus" data-price="40">
-                            <div class="flex justify-between items-center">
-                                <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Khobus</h3>
-                                    <p class="text-gray-600 font-outfit text-sm">(~ 100 gm) (minimum 6 pieces)</p>
-                                </div>
-                                <div class="text-right">
-                                    <span
-                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">40
-                                        tk/pc.</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="menu-item bg-white p-6 rounded-2xl shadow-md relative"
-                            data-name="regular ciabatta bread" data-price="80">
-                            <div class="absolute -top-2 -left-2">
-                                <div
-                                    class="bg-banana text-warm-brown px-3 py-1 rounded-full text-sm font-bold transform -rotate-12">
-                                    New!
-                                </div>
-                            </div>
-                            <div class="flex justify-between items-center">
-                                <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Regular Ciabatta Bread
-                                    </h3>
-                                    <p class="text-gray-600 font-outfit text-sm">(~180 gm) (Minimum 4 pieces)</p>
-                                </div>
-                                <div class="text-right">
-                                    <span
-                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">80
-                                        tk/loaf</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="menu-item bg-white p-6 rounded-2xl shadow-md relative"
-                            data-name="premium ciabatta bread" data-price="100">
-                            <div class="absolute -top-2 -left-2">
-                                <div
-                                    class="bg-banana text-warm-brown px-3 py-1 rounded-full text-sm font-bold transform -rotate-12">
-                                    New!
-                                </div>
-                            </div>
-                            <div class="flex justify-between items-center">
-                                <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Premium Ciabatta Bread
-                                    </h3>
-                                </div>
-                                <div class="text-right">
-                                    <span
-                                        class="text-lg font-semibold text-orange-600 font-outfit whitespace-nowrap">Coming
-                                        soon!</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="menu-item bg-white p-6 rounded-2xl shadow-md" data-name="arabian khalid al nahal"
-                            data-price="1200">
-                            <div class="flex justify-between items-center">
-                                <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Arabian Khalid Al
-                                        Nahal*
-                                    </h3>
-                                    <p class="text-gray-600 font-outfit text-sm">(9 inch) *Available only on weekends
-                                    </p>
-                                </div>
-                                <div class="text-right">
-                                    <span
-                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">1200
-                                        tk/loaf</span>
-                                </div>
-                            </div>
-                        </div>
+                        while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+                            extract($row);
+                            echo "<div class=\"menu-item relative bg-white p-6 rounded-2xl shadow-md\" data-name=\"$name\" data-price=\"$price\">";
+                            if ($is_new) {
+                                echo "<div class=\"absolute -top-2 -left-2\"><div class=\"bg-banana text-warm-brown px-3 py-1 rounded-full text-sm font-bold transform -rotate-12\">New!</div></div>";
+                            }
+                            echo "<div class=\"flex justify-between items-center\">";
+                            echo "<div><h3 class=\"text-xl font-bold text-gray-800 font-outfit mr-2\">$name</h3><p class=\"text-gray-600 font-outfit text-sm\">$size_info</p></div>";
+                            echo "<div class=\"text-right\"><button class=\"add-to-cart-btn bg-banana hover:bg-banana-dark text-warm-brown font-outfit font-semibold py-2 px-4 rounded-full btn-hover transition-colors duration-300 text-sm\" data-id=\"$id\" data-name=\"$name\" data-price=\"$price\">Add to Cart - $price tk</button></div>";
+                            echo "</div></div>";
+                        }
+                        ?>
                     </div>
                 </div>
             </div>
@@ -416,101 +182,23 @@
                     </div>
 
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div class="menu-item bg-white p-6 rounded-2xl shadow-md" data-name="burger bun"
-                            data-price="50">
-                            <div class="flex justify-between items-center">
-                                <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Burger Bun</h3>
-                                    <p class="text-gray-600 font-outfit text-sm">(~ 90 gm) (minimum 6 pieces)</p>
-                                </div>
-                                <div class="text-right">
-                                    <span
-                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">50
-                                        tk/pc.</span>
-                                </div>
-                            </div>
-                        </div>
+                        <?php
+                        $query = "SELECT * FROM menu_items WHERE category_id = 'buns' AND is_available = 1";
+                        $stmt = $db->prepare($query);
+                        $stmt->execute();
 
-                        <div class="menu-item bg-white p-6 rounded-2xl shadow-md" data-name="brioche burger bun"
-                            data-price="65">
-                            <div class="flex justify-between items-center">
-                                <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Brioche Burger Bun</h3>
-                                    <p class="text-gray-600 font-outfit text-sm">(~ 90 gm) (minimum 6 pieces)</p>
-                                </div>
-                                <div class="text-right">
-                                    <span
-                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">65
-                                        tk/pc.</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="menu-item bg-white p-6 rounded-2xl shadow-md" data-name="mini burger bun"
-                            data-price="35">
-                            <div class="flex justify-between items-center">
-                                <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Mini Burger Bun</h3>
-                                    <p class="text-gray-600 font-outfit text-sm">(~ 35 gm) (minimum 12 pieces)</p>
-                                </div>
-                                <div class="text-right">
-                                    <span
-                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">35
-                                        tk/pc.</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="menu-item bg-white p-6 rounded-2xl shadow-md" data-name="sourdough bun"
-                            data-price="65">
-                            <div class="flex justify-between items-center">
-                                <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Sourdough Bun</h3>
-                                    <p class="text-gray-600 font-outfit text-sm">(~ 90 gm) (minimum 10 pieces)</p>
-                                </div>
-                                <div class="text-right">
-                                    <span
-                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">65
-                                        tk/pc.</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="menu-item bg-white p-6 rounded-2xl shadow-md" data-name="brioche roll"
-                            data-price="60">
-                            <div class="flex justify-between items-center">
-                                <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Brioche Roll</h3>
-                                    <p class="text-gray-600 font-outfit text-sm">(~ 90 gm) (minimum 6 pieces)</p>
-                                </div>
-                                <div class="text-right">
-                                    <span
-                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">60
-                                        tk/pc.</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="menu-item bg-white p-6 rounded-2xl shadow-md relative" data-name="hot cross bun"
-                            data-price="85">
-                            <div class="absolute -top-2 -left-2">
-                                <div
-                                    class="bg-banana text-warm-brown px-3 py-1 rounded-full text-sm font-bold transform -rotate-12">
-                                    New!
-                                </div>
-                            </div>
-                            <div class="flex justify-between items-center">
-                                <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Hot Cross Bun</h3>
-                                    <p class="text-gray-600 font-outfit text-sm">(minimum 6 pieces)</p>
-                                </div>
-                                <div class="text-right">
-                                    <span
-                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">85
-                                        tk/pc.</span>
-                                </div>
-                            </div>
-                        </div>
+                        while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+                            extract($row);
+                            echo "<div class=\"menu-item bg-white p-6 rounded-2xl shadow-md\" data-name=\"$name\" data-price=\"$price\">";
+                            if ($is_new) {
+                                echo "<div class=\"absolute -top-2 -left-2\"><div class=\"bg-banana text-warm-brown px-3 py-1 rounded-full text-sm font-bold transform -rotate-12\">New!</div></div>";
+                            }
+                            echo "<div class=\"flex justify-between items-center\">";
+                            echo "<div><h3 class=\"text-xl font-bold text-gray-800 font-outfit mr-2\">$name</h3><p class=\"text-gray-600 font-outfit text-sm\">$size_info</p></div>";
+                            echo "<div class=\"text-right\"><button class=\"add-to-cart-btn bg-banana hover:bg-banana-dark text-warm-brown font-outfit font-semibold py-2 px-4 rounded-full btn-hover transition-colors duration-300 text-sm\" data-id=\"$id\" data-name=\"$name\" data-price=\"$price\">Add to Cart - $price tk</button></div>";
+                            echo "</div></div>";
+                        }
+                        ?>
                     </div>
                 </div>
             </div>
@@ -534,163 +222,23 @@
                     </div>
 
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div class="menu-item bg-white p-6 rounded-2xl shadow-md relative"
-                            data-name="cinnamon raisin bagel" data-price="95">
-                            <div class="absolute -top-2 -left-2">
-                                <div
-                                    class="bg-banana text-warm-brown px-3 py-1 rounded-full text-sm font-bold transform -rotate-12">
-                                    New!
-                                </div>
-                            </div>
-                            <div class="flex justify-between items-center">
-                                <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Cinnamon Raisin Bagel
-                                    </h3>
-                                    <p class="text-gray-600 font-outfit text-sm">(~ 90 gm)</p>
-                                </div>
-                                <div class="text-right">
-                                    <span
-                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">95
-                                        tk/pc.</span>
-                                </div>
-                            </div>
-                        </div>
+                        <?php
+                        $query = "SELECT * FROM menu_items WHERE category_id = 'bagels' AND is_available = 1";
+                        $stmt = $db->prepare($query);
+                        $stmt->execute();
 
-                        <div class="menu-item bg-white p-6 rounded-2xl shadow-md" data-name="plain bagel"
-                            data-price="80">
-                            <div class="flex justify-between items-center">
-                                <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Plain Bagel</h3>
-                                    <p class="text-gray-600 font-outfit text-sm">(~ 90 gm)</p>
-                                </div>
-                                <div class="text-right">
-                                    <span
-                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">80
-                                        tk/pc.</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="menu-item bg-white p-6 rounded-2xl shadow-md" data-name="sesame bagel"
-                            data-price="80">
-                            <div class="flex justify-between items-center">
-                                <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Sesame Bagel</h3>
-                                    <p class="text-gray-600 font-outfit text-sm">(~ 90 gm)</p>
-                                </div>
-                                <div class="text-right">
-                                    <span
-                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">80
-                                        tk/pc.</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="menu-item bg-white p-6 rounded-2xl shadow-md" data-name="mixed seed bagel"
-                            data-price="90">
-                            <div class="flex justify-between items-center">
-                                <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Mixed Seed Bagel</h3>
-                                    <p class="text-gray-600 font-outfit text-sm">(~ 90 gm)</p>
-                                </div>
-                                <div class="text-right">
-                                    <span
-                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">90
-                                        tk/pc.</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="menu-item bg-white p-6 rounded-2xl shadow-md" data-name="chia bagel"
-                            data-price="90">
-                            <div class="flex justify-between items-center">
-                                <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Chia Bagel</h3>
-                                    <p class="text-gray-600 font-outfit text-sm">(~ 90 gm)</p>
-                                </div>
-                                <div class="text-right">
-                                    <span
-                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">90
-                                        tk/pc.</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="menu-item bg-white p-6 rounded-2xl shadow-md" data-name="cheese bagel"
-                            data-price="100">
-                            <div class="flex justify-between items-center">
-                                <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Cheese Bagel</h3>
-                                    <p class="text-gray-600 font-outfit text-sm">(~ 90 gm)</p>
-                                </div>
-                                <div class="text-right">
-                                    <span
-                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">100
-                                        tk/pc.</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="menu-item bg-white p-6 rounded-2xl shadow-md" data-name="black sesame bagel"
-                            data-price="95">
-                            <div class="flex justify-between items-center">
-                                <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Black Sesame Bagel</h3>
-                                    <p class="text-gray-600 font-outfit text-sm">(~ 90 gm)</p>
-                                </div>
-                                <div class="text-right">
-                                    <span
-                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">95
-                                        tk/pc.</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="menu-item bg-white p-6 rounded-2xl shadow-md" data-name="bagel bunch"
-                            data-price="500">
-                            <div class="flex justify-between items-center">
-                                <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Bagel Bunch</h3>
-                                    <p class="text-gray-600 font-outfit text-sm">(A set of Plain, Cheese, White Sesame,
-                                        Black Sesame, Chia and Mixed Seed Bagel)</p>
-                                </div>
-                                <div class="text-right">
-                                    <span
-                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">500
-                                        tk/set</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="menu-item bg-white p-6 rounded-2xl shadow-md" data-name="garlic herb bagel"
-                            data-price="0">
-                            <div class="flex justify-between items-center">
-                                <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Garlic Herb Bagel</h3>
-                                    <p class="text-gray-600 font-outfit text-sm">(~ 90 gm)</p>
-                                </div>
-                                <div class="text-right">
-                                    <span
-                                        class="text-lg font-semibold text-orange-600 font-outfit whitespace-nowrap">Coming
-                                        soon!</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="menu-item bg-white p-6 rounded-2xl shadow-md" data-name="everything bagel"
-                            data-price="0">
-                            <div class="flex justify-between items-center">
-                                <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Everything Bagel</h3>
-                                    <p class="text-gray-600 font-outfit text-sm">(~ 90 gm)</p>
-                                </div>
-                                <div class="text-right">
-                                    <span
-                                        class="text-lg font-semibold text-orange-600 font-outfit whitespace-nowrap">Coming
-                                        soon!</span>
-                                </div>
-                            </div>
-                        </div>
+                        while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+                            extract($row);
+                            echo "<div class=\"menu-item bg-white p-6 rounded-2xl shadow-md\" data-name=\"$name\" data-price=\"$price\">";
+                            if ($is_new) {
+                                echo "<div class=\"absolute -top-2 -left-2\"><div class=\"bg-banana text-warm-brown px-3 py-1 rounded-full text-sm font-bold transform -rotate-12\">New!</div></div>";
+                            }
+                            echo "<div class=\"flex justify-between items-center\">";
+                            echo "<div><h3 class=\"text-xl font-bold text-gray-800 font-outfit mr-2\">$name</h3><p class=\"text-gray-600 font-outfit text-sm\">$size_info</p></div>";
+                            echo "<div class=\"text-right\"><button class=\"add-to-cart-btn bg-banana hover:bg-banana-dark text-warm-brown font-outfit font-semibold py-2 px-4 rounded-full btn-hover transition-colors duration-300 text-sm\" data-id=\"$id\" data-name=\"$name\" data-price=\"$price\">Add to Cart - $price tk</button></div>";
+                            echo "</div></div>";
+                        }
+                        ?>
                     </div>
                 </div>
             </div>
@@ -714,124 +262,23 @@
                     </div>
 
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div class="menu-item bg-white p-6 rounded-2xl shadow-md" data-name="cheese kunafa"
-                            data-price="290">
-                            <div class="flex justify-between items-center">
-                                <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Cheese Kunafa</h3>
-                                    <p class="text-gray-600 font-outfit text-sm">(minimum 2 pieces)</p>
-                                </div>
-                                <div class="text-right">
-                                    <span
-                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">290
-                                        tk/pc.</span>
-                                </div>
-                            </div>
-                        </div>
+                        <?php
+                        $query = "SELECT * FROM menu_items WHERE category_id = 'desserts' AND is_available = 1";
+                        $stmt = $db->prepare($query);
+                        $stmt->execute();
 
-                        <div class="menu-item bg-white p-6 rounded-2xl shadow-md" data-name="chocolate brownie"
-                            data-price="115">
-                            <div class="flex justify-between items-center">
-                                <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Chocolate Brownie</h3>
-                                </div>
-                                <div class="text-right">
-                                    <span
-                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">115
-                                        tk/pc.</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="menu-item bg-white p-6 rounded-2xl shadow-md"
-                            data-name="chocolate peanut crunch brownie" data-price="130">
-                            <div class="flex justify-between items-center">
-                                <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Chocolate Peanut Crunch
-                                        Brownie</h3>
-                                </div>
-                                <div class="text-right">
-                                    <span
-                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">130
-                                        tk/pc.</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="menu-item bg-white p-6 rounded-2xl shadow-md" data-name="chocolate chips cookie"
-                            data-price="75">
-                            <div class="flex justify-between items-center">
-                                <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Chocolate Chips Cookie
-                                    </h3>
-                                    <p class="text-gray-600 font-outfit text-sm">(~ 50 gm) (minimum 10 pieces)</p>
-                                </div>
-                                <div class="text-right">
-                                    <span
-                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">75
-                                        tk/pc.</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="menu-item bg-white p-6 rounded-2xl shadow-md" data-name="oatmeal cookie"
-                            data-price="65">
-                            <div class="flex justify-between items-center">
-                                <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Oatmeal Cookie</h3>
-                                    <p class="text-gray-600 font-outfit text-sm">(~ 25 gm) (minimum 10 pieces)</p>
-                                </div>
-                                <div class="text-right">
-                                    <span
-                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">65
-                                        tk/pc.</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="menu-item bg-white p-6 rounded-2xl shadow-md relative"
-                            data-name="pumpkin spice muffin" data-price="65">
-                            <div class="absolute -top-2 -left-2">
-                                <div
-                                    class="bg-banana text-warm-brown px-3 py-1 rounded-full text-sm font-bold transform -rotate-12">
-                                    New!
-                                </div>
-                            </div>
-                            <div class="flex justify-between items-center">
-                                <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Pumpkin Spice Muffin
-                                    </h3>
-                                    <p class="text-gray-600 font-outfit text-sm">(minimum 4 pieces)</p>
-                                </div>
-                                <div class="text-right">
-                                    <span
-                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">65
-                                        tk/pc.</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="menu-item bg-white p-6 rounded-2xl shadow-md relative"
-                            data-name="carrot cheese muffin" data-price="65">
-                            <div class="absolute -top-2 -left-2">
-                                <div
-                                    class="bg-banana text-warm-brown px-3 py-1 rounded-full text-sm font-bold transform -rotate-12">
-                                    New!
-                                </div>
-                            </div>
-                            <div class="flex justify-between items-center">
-                                <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Carrot Cheese Muffin
-                                    </h3>
-                                    <p class="text-gray-600 font-outfit text-sm">(minimum 4 pieces)</p>
-                                </div>
-                                <div class="text-right">
-                                    <span
-                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">65
-                                        tk/pc.</span>
-                                </div>
-                            </div>
-                        </div>
+                        while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+                            extract($row);
+                            echo "<div class=\"menu-item bg-white p-6 rounded-2xl shadow-md\" data-name=\"$name\" data-price=\"$price\">";
+                            if ($is_new) {
+                                echo "<div class=\"absolute -top-2 -left-2\"><div class=\"bg-banana text-warm-brown px-3 py-1 rounded-full text-sm font-bold transform -rotate-12\">New!</div></div>";
+                            }
+                            echo "<div class=\"flex justify-between items-center\">";
+                            echo "<div><h3 class=\"text-xl font-bold text-gray-800 font-outfit mr-2\">$name</h3><p class=\"text-gray-600 font-outfit text-sm\">$size_info</p></div>";
+                            echo "<div class=\"text-right\"><button class=\"add-to-cart-btn bg-banana hover:bg-banana-dark text-warm-brown font-outfit font-semibold py-2 px-4 rounded-full btn-hover transition-colors duration-300 text-sm\" data-id=\"$id\" data-name=\"$name\" data-price=\"$price\">Add to Cart - $price tk</button></div>";
+                            echo "</div></div>";
+                        }
+                        ?>
                     </div>
                 </div>
             </div>
@@ -855,96 +302,23 @@
                     </div>
 
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div class="menu-item bg-white p-6 rounded-2xl shadow-md" data-name="mango cheese tart"
-                            data-price="135">
-                            <div class="flex justify-between items-center">
-                                <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Mango Cheese Tart</h3>
-                                </div>
-                                <div class="text-right">
-                                    <span
-                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">135
-                                        tk/pc.</span>
-                                </div>
-                            </div>
-                        </div>
+                        <?php
+                        $query = "SELECT * FROM menu_items WHERE category_id = 'tarts' AND is_available = 1";
+                        $stmt = $db->prepare($query);
+                        $stmt->execute();
 
-                        <div class="menu-item bg-white p-6 rounded-2xl shadow-md" data-name="hokkaido cheese tart"
-                            data-price="125">
-                            <div class="flex justify-between items-center">
-                                <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Hokkaido Cheese Tart
-                                    </h3>
-                                </div>
-                                <div class="text-right">
-                                    <span
-                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">125
-                                        tk/pc.</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="menu-item bg-white p-6 rounded-2xl shadow-md" data-name="egg tart" data-price="120">
-                            <div class="flex justify-between items-center">
-                                <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Egg Tart</h3>
-                                </div>
-                                <div class="text-right">
-                                    <span
-                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">120
-                                        tk/pc.</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="menu-item bg-white p-6 rounded-2xl shadow-md" data-name="chocolate cheese tart"
-                            data-price="125">
-                            <div class="flex justify-between items-center">
-                                <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Chocolate Cheese Tart
-                                    </h3>
-                                </div>
-                                <div class="text-right">
-                                    <span
-                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">125
-                                        tk/pc.</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="menu-item bg-white p-6 rounded-2xl shadow-md" data-name="custard tart"
-                            data-price="120">
-                            <div class="flex justify-between items-center">
-                                <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Custard Tart</h3>
-                                </div>
-                                <div class="text-right">
-                                    <span
-                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">120
-                                        tk/pc.</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="menu-item bg-white p-6 rounded-2xl shadow-md relative" data-name="lemon tart"
-                            data-price="150">
-                            <div class="absolute -top-2 -left-2">
-                                <div
-                                    class="bg-banana text-warm-brown px-3 py-1 rounded-full text-sm font-bold transform -rotate-12">
-                                    New!
-                                </div>
-                            </div>
-                            <div class="flex justify-between items-center">
-                                <div>
-                                    <h3 class="text-xl font-bold text-gray-800 font-outfit mr-2">Lemon Tart</h3>
-                                </div>
-                                <div class="text-right">
-                                    <span
-                                        class="text-2xl md:text-xl font-bold text-gray-800 font-outfit whitespace-nowrap">150
-                                        tk/pc.</span>
-                                </div>
-                            </div>
-                        </div>
+                        while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+                            extract($row);
+                            echo "<div class=\"menu-item bg-white p-6 rounded-2xl shadow-md\" data-name=\"$name\" data-price=\"$price\">";
+                            if ($is_new) {
+                                echo "<div class=\"absolute -top-2 -left-2\"><div class=\"bg-banana text-warm-brown px-3 py-1 rounded-full text-sm font-bold transform -rotate-12\">New!</div></div>";
+                            }
+                            echo "<div class=\"flex justify-between items-center\">";
+                            echo "<div><h3 class=\"text-xl font-bold text-gray-800 font-outfit mr-2\">$name</h3><p class=\"text-gray-600 font-outfit text-sm\">$size_info</p></div>";
+                            echo "<div class=\"text-right\"><button class=\"add-to-cart-btn bg-banana hover:bg-banana-dark text-warm-brown font-outfit font-semibold py-2 px-4 rounded-full btn-hover transition-colors duration-300 text-sm\" data-id=\"$id\" data-name=\"$name\" data-price=\"$price\">Add to Cart - $price tk</button></div>";
+                            echo "</div></div>";
+                        }
+                        ?>
                     </div>
                 </div>
             </div>
